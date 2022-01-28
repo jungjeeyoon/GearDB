@@ -238,6 +238,7 @@ class LEVELDB_EXPORT WritableFile {
   virtual Status Flush() = 0;
   virtual Status Sync() = 0;
   virtual Status Setlevel(int level = 0) = 0;
+
   virtual const char* Getbuf() = 0;
 
  private:

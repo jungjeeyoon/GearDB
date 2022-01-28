@@ -14,8 +14,17 @@
 #include "table/format.h"
 #include "table/two_level_iterator.h"
 #include "util/coding.h"
+#include <sys/time.h>
 
+#include "../hm/hm_manager.h"
+#include "../hm/get_manager.h"
 namespace leveldb {
+
+static uint64_t get_now_micros(){
+      struct timeval tv;
+      gettimeofday(&tv, NULL);
+      return (tv.tv_sec) * 1000000 + tv.tv_usec;
+}
 
 struct Table::Rep {
   ~Rep() {
@@ -158,12 +167,12 @@ static void ReleaseBlock(void* arg, void* h) {
 // into an iterator over the contents of the corresponding block.
 Iterator* Table::BlockReader(void* arg,
                              const ReadOptions& options,
-                             const Slice& index_value) {
+                             const Slice& index_value ) {
   Table* table = reinterpret_cast<Table*>(arg);
   Cache* block_cache = table->rep_->options.block_cache;
   Block* block = NULL;
   Cache::Handle* cache_handle = NULL;
-
+  
   BlockHandle handle;
   Slice input = index_value;
   Status s = handle.DecodeFrom(&input);
@@ -222,8 +231,13 @@ Status Table::InternalGet(const ReadOptions& options, const Slice& k,
                           void* arg,
                           void (*saver)(void*, const Slice&, const Slice&)) {
   Status s;
+ 
   Iterator* iiter = rep_->index_block->NewIterator(rep_->options.comparator);
+  
+  double start = get_now_micros();
   iiter->Seek(k);
+  Singleton::Gethmmanager()->iiter_time += (get_now_micros() - start);
+
   if (iiter->Valid()) {
     Slice handle_value = iiter->value();
     FilterBlockReader* filter = rep_->filter;
@@ -233,8 +247,14 @@ Status Table::InternalGet(const ReadOptions& options, const Slice& k,
         !filter->KeyMayMatch(handle.offset(), k)) {
       // Not found
     } else {
+      start = get_now_micros();
       Iterator* block_iter = BlockReader(this, options, iiter->value());
+      Singleton::Gethmmanager()->block_read_time += (get_now_micros() - start);
+      
+      start = get_now_micros();
       block_iter->Seek(k);
+      Singleton::Gethmmanager()->seek_time += (get_now_micros() - start);
+      
       if (block_iter->Valid()) {
         (*saver)(arg, block_iter->key(), block_iter->value());
       }
@@ -242,10 +262,12 @@ Status Table::InternalGet(const ReadOptions& options, const Slice& k,
       delete block_iter;
     }
   }
+ 
   if (s.ok()) {
     s = iiter->status();
   }
   delete iiter;
+
   return s;
 }
 

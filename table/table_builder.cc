@@ -178,6 +178,7 @@ void TableBuilder::WriteRawBlock(const Slice& block_contents,
   Rep* r = rep_;
   handle->set_offset(r->offset);
   handle->set_size(block_contents.size());
+ //printf("size is %d %s\n",block_contents.size(),block_contents.data());
   r->status = r->file->Append(block_contents);
   if (r->status.ok()) {
     char trailer[kBlockTrailerSize];
@@ -185,6 +186,7 @@ void TableBuilder::WriteRawBlock(const Slice& block_contents,
     uint32_t crc = crc32c::Value(block_contents.data(), block_contents.size());
     crc = crc32c::Extend(crc, trailer, 1);  // Extend crc to cover block type
     EncodeFixed32(trailer+1, crc32c::Mask(crc));
+    //printf("size is %d %s\n",Slice(trailer, kBlockTrailerSize).size(),Slice(trailer, kBlockTrailerSize).data());
     r->status = r->file->Append(Slice(trailer, kBlockTrailerSize));
     if (r->status.ok()) {
       r->offset += block_contents.size() + kBlockTrailerSize;

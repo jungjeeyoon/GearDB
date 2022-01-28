@@ -42,8 +42,8 @@ class DBImpl : public DB {
   virtual Status Delete(const WriteOptions&, const Slice& key);
   virtual Status Write(const WriteOptions& options, WriteBatch* updates);
   virtual Status Get(const ReadOptions& options,
-                     const Slice& key,
-                     std::string* value);
+		  const Slice& key,
+		  std::string* value);
   virtual Iterator* NewIterator(const ReadOptions&);
   virtual const Snapshot* GetSnapshot();
   virtual void ReleaseSnapshot(const Snapshot* snapshot);
@@ -74,13 +74,14 @@ class DBImpl : public DB {
   void RecordReadSample(Slice key);
 
  private:
+  int comp_time = 0;
   friend class DB;
   struct CompactionState;
   struct Writer;
 
   Iterator* NewInternalIterator(const ReadOptions&,
-                                SequenceNumber* latest_snapshot,
-                                uint32_t* seed);
+		  SequenceNumber* latest_snapshot,
+		  uint32_t* seed);
 
   Status NewDB();
 
@@ -88,7 +89,7 @@ class DBImpl : public DB {
   // amount of work to recover recently logged updates.  Any changes to
   // be made to the descriptor are added to *edit.
   Status Recover(VersionEdit* edit, bool* save_manifest)
-      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+	  EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   void MaybeIgnoreError(Status* s) const;
 
@@ -101,14 +102,14 @@ class DBImpl : public DB {
   void CompactMemTable() EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   Status RecoverLogFile(uint64_t log_number, bool last_log, bool* save_manifest,
-                        VersionEdit* edit, SequenceNumber* max_sequence)
-      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+		  VersionEdit* edit, SequenceNumber* max_sequence)
+	  EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   Status WriteLevel0Table(MemTable* mem, VersionEdit* edit, Version* base)
-      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+	  EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   Status MakeRoomForWrite(bool force /* compact even if there is room? */)
-      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+	  EXCLUSIVE_LOCKS_REQUIRED(mutex_);
   WriteBatch* BuildBatchGroup(Writer** last_writer);
 
   void RecordBackgroundError(const Status& s);
@@ -118,22 +119,22 @@ class DBImpl : public DB {
   void BackgroundCall();
   void  BackgroundCompaction() EXCLUSIVE_LOCKS_REQUIRED(mutex_);
   void CleanupCompaction(CompactionState* compact)
-      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+	  EXCLUSIVE_LOCKS_REQUIRED(mutex_);
   Status DoCompactionWork(CompactionState* compact)
-      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+	  EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
   Status OpenCompactionOutputFile(CompactionState* compact);
   Status FinishCompactionOutputFile(CompactionState* compact, Iterator* input);
   Status InstallCompactionResults(CompactionState* compact)
-      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+	  EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
-//////
+  //////
   Status DoMyCompactionWork(CompactionState* compact)
-      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
-  
+	  EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+
   Status MergeCompactionWork(CompactionState* compact)
-      EXCLUSIVE_LOCKS_REQUIRED(mutex_);
-//////
+	  EXCLUSIVE_LOCKS_REQUIRED(mutex_);
+  //////
 
   // Constant after construction
   Env* const env_;
@@ -177,11 +178,11 @@ class DBImpl : public DB {
 
   // Information for a manual compaction
   struct ManualCompaction {
-    int level;
-    bool done;
-    const InternalKey* begin;   // NULL means beginning of key range
-    const InternalKey* end;     // NULL means end of key range
-    InternalKey tmp_storage;    // Used to keep track of compaction progress
+	  int level;
+	  bool done;
+	  const InternalKey* begin;   // NULL means beginning of key range
+	  const InternalKey* end;     // NULL means end of key range
+	  InternalKey tmp_storage;    // Used to keep track of compaction progress
   };
   ManualCompaction* manual_compaction_;
 
@@ -191,27 +192,27 @@ class DBImpl : public DB {
   Status bg_error_;
 
   //////added by lzw
-    HMManager *hm_manager_;
+  HMManager *hm_manager_;
 
-    double log_write_time_;
-    int64_t compaction_num_;
+  double log_write_time_;
+  int64_t compaction_num_;
   //////end
 
 
   // Per level compaction stats.  stats_[level] stores the stats for
   // compactions that produced data for the specified "level".
   struct CompactionStats {
-    int64_t micros;
-    int64_t bytes_read;
-    int64_t bytes_written;
+	  int64_t micros;
+	  int64_t bytes_read;
+	  int64_t bytes_written;
 
-    CompactionStats() : micros(0), bytes_read(0), bytes_written(0) { }
+	  CompactionStats() : micros(0), bytes_read(0), bytes_written(0) { }
 
-    void Add(const CompactionStats& c) {
-      this->micros += c.micros;
-      this->bytes_read += c.bytes_read;
-      this->bytes_written += c.bytes_written;
-    }
+	  void Add(const CompactionStats& c) {
+		  this->micros += c.micros;
+		  this->bytes_read += c.bytes_read;
+		  this->bytes_written += c.bytes_written;
+	  }
   };
   CompactionStats stats_[config::kNumLevels];
 
@@ -220,16 +221,16 @@ class DBImpl : public DB {
   void operator=(const DBImpl&);
 
   const Comparator* user_comparator() const {
-    return internal_comparator_.user_comparator();
+	  return internal_comparator_.user_comparator();
   }
 };
 
 // Sanitize db options.  The caller should delete result.info_log if
 // it is not equal to src.info_log.
 extern Options SanitizeOptions(const std::string& db,
-                               const InternalKeyComparator* icmp,
-                               const InternalFilterPolicy* ipolicy,
-                               const Options& src);
+		const InternalKeyComparator* icmp,
+		const InternalFilterPolicy* ipolicy,
+		const Options& src);
 
 }  // namespace leveldb
 

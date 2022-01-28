@@ -10,6 +10,7 @@
 #include <cstring>
 #include <map>
 #include <vector>  
+#include <libzbd/zbd.h>
 
 #include "../db/dbformat.h"
 #include "../hm/my_log.h"
@@ -17,9 +18,7 @@
 #include "../hm/hm_status.h"
 
 
-extern "C" {
-#include <libzbc/zbc.h>
-}
+
 
 namespace leveldb{
 
@@ -58,16 +57,33 @@ namespace leveldb{
         void get_valid_info();
         void get_all_info();
         void get_valid_data();
+        void get_split_info();
         void get_my_info(int num);
         void get_valid_all_data(int num);
-
+        
+        //jeeyoon add
+        bool     can_victim_zone(uint64_t zone, int level);
+        uint64_t get_victim_zone(int level);
+        void     move_to_next_level(int level);
+        uint64_t Get_Count = 0;
+        uint64_t Get_File = 0;
+        uint64_t MetaSearch = 0;
+        uint64_t NoCache = 0;
+        double total_get_time = 0.;
+        double find_file_time = 0.;
+        double table_cache_get_time = 0.;
+        double find_table_time = 0.;
+        double Internal_get_time = 0.;
+        double iiter_time = 0.;
+        double block_read_time = 0.;
+        double seek_time = 0.;
         //////end
 
     private:
         BitMap *bitmap_;
 
-        struct zbc_device *dev_;
-        struct zbc_zone  *zone_;
+        struct zbd_info dev_;
+        struct zbd_zone  *zone_;
         unsigned int zonenum_;
         int first_zonenum_;
 

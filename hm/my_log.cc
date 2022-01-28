@@ -35,7 +35,7 @@ namespace leveldb{
     }
     
     void MyLog(const char* format, ...){
-#if GEARDB_DBBUG
+#if 1
         va_list ap;
         va_start(ap, format);
         char buf[1024];

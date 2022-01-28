@@ -31,6 +31,10 @@
 #include "../hm/hm_manager.h"
 #include "../hm/get_manager.h"
 
+
+int wccount = 0;
+int rccount = 0;
+
 namespace leveldb {
 
 namespace {
@@ -113,6 +117,8 @@ class HMComRamdomAccessFile : public RandomAccessFile {  //when compaction,we ca
       ldb=hm_manager_->get_one_table(filenum);
       //buf_ = new char[ldb->size];
       int ret=posix_memalign((void **)&buf_,MEMALIGN_SIZE,ldb->size);
+      rccount++;
+      //printf("random access file is %d count is %d\n",filenum, rccount);
       if(ret!=0){
           printf("error:%d posix_memalign falid!\n",ret);
       }
@@ -131,7 +137,10 @@ class HMComRamdomAccessFile : public RandomAccessFile {  //when compaction,we ca
 
     virtual ~HMComRamdomAccessFile() {
       if (buf_ != NULL) {
-        delete buf_;
+        rccount--;
+        //printf("delete read file %d count is %d\n",filenum, rccount);
+        free(buf_);
+        //delete buf_;
       }
       //MyLog("free table:%ld\n",filenum);
     }
@@ -151,11 +160,11 @@ class HMWritableFile : public WritableFile {    //hm write file except L0 level
   private:
     HMManager* hm_manager_;
     std::string fname_;
-    int level_;
     char* buf_; //Fixed buffer size
     uint64_t total_size_;
-
+    int level_;
   public:
+    
     HMWritableFile(const std::string &fname,HMManager* hm_manager,int level)
       : fname_(fname),total_size_(0), hm_manager_(hm_manager),level_(level)
     {
@@ -163,8 +172,10 @@ class HMWritableFile : public WritableFile {    //hm write file except L0 level
         printf("ldb file have error level!table:%ld\n",Parsefname(fname_));
       }
       //buf_ = new char[Options().max_file_size + 1*1024*1024];
-      uint64_t size=(Options().max_file_size + 1*1024*1024);
+      uint64_t size=(65*1024*1024);
       int ret=posix_memalign((void **)&buf_,MEMALIGN_SIZE,size);
+    //  wccount++;
+      //printf("Writable file count is %d\n",wccount);
       if(ret!=0){
           printf("error:%d posix_memalign falid!\n",ret);
       }
@@ -172,7 +183,10 @@ class HMWritableFile : public WritableFile {    //hm write file except L0 level
 
     ~HMWritableFile() {
       if (buf_ != NULL) {
-        delete buf_;
+        free(buf_);
+      //  wccount--;
+      //  printf("delete writable file %d\n",wccount);
+        //delete buf_;
       }
     }
 
@@ -192,13 +206,19 @@ class HMWritableFile : public WritableFile {    //hm write file except L0 level
 
     virtual Status Sync() { 
       ssize_t ret = hm_manager_->hm_write(level_,Parsefname(fname_), buf_, total_size_);
+     
       if(ret > 0){
           return Status::OK();
       }
       return Status::IOError("sync error!");
     }
 
-    virtual Status Setlevel(int level = 0) { return Status::OK(); }
+    virtual Status Setlevel(int level = 0) { 
+     // printf("non l0 %d\n",level);
+      level_ = level;
+      return Status::OK(); }
+    
+ 
     virtual const char* Getbuf() { return buf_; }
 
 };
@@ -207,33 +227,45 @@ class HMWritableFileL0 : public WritableFile {    //hm write L0 level file
   private:
     HMManager* hm_manager_;
     std::string fname_;
-    int level_;
     char* buf_; 
     uint64_t total_size_;
-
+    int level_;
   public:
+  
+
     HMWritableFileL0(const std::string &fname,HMManager* hm_manager,int level)
       : fname_(fname),total_size_(0), hm_manager_(hm_manager),level_(level)
     {
       if(level_ == -1){
         printf("ldb file have error level!table:%ld\n",Parsefname(fname_));
       }
-      //buf_ = new char[Options().write_buffer_size + 1*1024*1024];
-      uint64_t size=(Options().write_buffer_size + 1*1024*1024);
+      //buf_ = new char[Options().write_buffer_size + 1*1024*1024*2];
+      uint64_t size=((65*1024*1024));
+      //printf("%d\n",Options().write_buffer_size + 1024*1024*16);
       int ret=posix_memalign((void **)&buf_,MEMALIGN_SIZE,size);
-      if(ret!=0){
+    //  wccount++;
+      //printf("writable file is %d\n",wccount);
+      if(ret != 0){
           printf("error:%d posix_memalign falid!\n",ret);
       }
     }
 
     ~HMWritableFileL0() {
       if (buf_ != NULL) {
-        delete buf_;
+        free(buf_);
+        //wccount--;
+      //  printf("delete writable file %d\n",wccount);
+        //delete buf_;
       }
     }
 
     virtual Status Append(const Slice &data) {
+      //printf("1\n");
+      //printf("%u %u %u %u\n",buf_,total_size_,data.data(), data.size());
+      //printf("total size is %d data.size() is %d sum is %d, buffer size is %d\n", total_size_, data.size(), total_size_ + data.size(), Options().write_buffer_size + 1024*1024*1);
       memcpy(buf_ + total_size_, data.data(), data.size());
+      
+      //printf("2\n");
       total_size_ += data.size();
       return Status::OK();
     }
@@ -255,9 +287,12 @@ class HMWritableFileL0 : public WritableFile {    //hm write L0 level file
     }
 
     virtual Status Setlevel(int level = 0){
+      //printf("l0 %d\n",level);
       level_ = level;
       return Status::OK();
     }
+
+
 
     virtual const char* Getbuf() { return buf_; }
 
@@ -500,6 +535,7 @@ class PosixWritableFile : public WritableFile {
   }
 
   virtual Status Setlevel(int level = 0) { return Status::OK(); }
+ 
   virtual const char* Getbuf() { return NULL; }
 
   Status SyncDirIfManifest() {

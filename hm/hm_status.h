@@ -10,14 +10,15 @@
 #define PHYSICAL_BLOCK_SIZE 4096   //Disk physical block size, write operation may align with it; get it maybe can accord to the environment in some way
 #define LOGICAL_BLOCK_SIZE 4096  //Disk logical block size, read operation may align with it; get it maybe can accord to the environment in some way
 
-#define COM_WINDOW_SCALE 4    //The proportion of Compaction window to the total number of zone numbers in the level
+#define COM_WINDOW_SCALE 1    //The proportion of Compaction window to the total number of zone numbers in the level
+//jjy
 #define HAVE_WINDOW_SCALE 4   //The level's data reaches the level threshold * 1/HAVE_WINDOW_SCALE ,then have compaction window
 
 #define COM_WINDOW_SEQ 1      //0 means the compaction window selects zone random; 1 means the compaction window selects zone compaction
 
 #define MEMALIGN_SIZE (sysconf(_SC_PAGESIZE))     //The size of the alignment when applying for memory using posix_memalign
 
-#define Verify_Table 1        //To confirm whether the SSTable is useful, every time an SSTable is written to the disk, \
+#define Verify_Table 0        //To confirm whether the SSTable is useful, every time an SSTable is written to the disk, \
                              //it will read the handle of the file and add it to the leveldb's table cache. This is the leveldb's own mechanism;
                              // 1 means that there is this mechanism; 0 means no such mechanism.
 
@@ -27,7 +28,7 @@
 
 namespace leveldb {
     
-    static const char smr_filename[]="";   //e.g. smr_filename[]="/dev/sdb1";
+    static const char smr_filename[]="/dev/nvme0n1";   //e.g. smr_filename[]="/dev/sdb1";
 
     struct Ldbfile {     //file = SSTable ,file Metadata struct
         uint64_t table;  //file name = fiel serial number
@@ -67,6 +68,13 @@ namespace leveldb {
                 size += (*it)->size;
             }
             return size;
+        }
+        void get_all_file_info(){
+            uint64_t size=0;
+            std::vector<struct Ldbfile*>::iterator it;
+            for(it=ldb.begin();it!=ldb.end();it++){
+                MyLog("level:%d, table:%d\n",(*it)->level,(*it)->table);
+            }
         }
     };
 

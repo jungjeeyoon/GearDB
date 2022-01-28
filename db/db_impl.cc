@@ -36,6 +36,12 @@
 #include "../hm/get_manager.h"
 #include "../hm/container.h"
 
+#define SPLIT
+#define TEMP_FILE
+//jjy
+
+unsigned long long MAX_EST = 0;
+
 namespace leveldb {
 
 const int kNumNonTableCacheFiles = 10;
@@ -66,6 +72,7 @@ struct DBImpl::CompactionState {
     uint64_t file_size;
     int level;
     InternalKey smallest, largest;
+    int alloc=0;
   };
   std::vector<Output> outputs;    
 
@@ -156,6 +163,7 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname)
 
   // Reserve ten files or so for other uses and give the rest to TableCache.
   const int table_cache_size = options_.max_open_files - kNumNonTableCacheFiles;
+  printf("max open files is %d\n", options_.max_open_files);
   table_cache_ = new TableCache(dbname_, &options_, table_cache_size);
 
   versions_ = new VersionSet(dbname_, &options_, table_cache_,
@@ -163,6 +171,7 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname)
 }
 
 DBImpl::~DBImpl() {
+  hm_manager_->get_all_info();
   // Wait for background work to finish
   mutex_.Lock();
   shutting_down_.Release_Store(this);  // Any non-NULL value is ok
@@ -566,6 +575,7 @@ Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit,
     if (base != NULL) {
       level = base->PickLevelForMemTableOutput(min_user_key, max_user_key);
     }
+    level = 0;
     file->Setlevel(level);
     file->Sync();
 #if Verify_Table
@@ -771,6 +781,22 @@ void DBImpl::BackgroundCompaction() {
         (m->end ? m->end->DebugString().c_str() : "(end)"),
         (m->done ? "(end)" : manual_end.DebugString().c_str()));
   } else {
+    /*c = versions_->PickCompaction();
+    int level = versions_->current()->get_compaction_level();
+    if(versions_->current()->NumFiles(level) == 0){
+      hm_manager_->move_to_next_level(level-1);
+      Status status;
+      for (size_t i = 0; i < versions_->current()->get_files(level-1).size(); i++) {
+        FileMetaData* f = versions_->current()->get_files(level-1)[i];
+        c->edit()->DeleteFile(c->level(), f->number);
+        c->edit()->AddFile(c->level() + 1, f->number, f->file_size,f->smallest, f->largest);
+      }
+      status = versions_->LogAndApply(c->edit(), &mutex_,0);
+      if (!status.ok()) {
+        RecordBackgroundError(status);
+      }
+    }
+    delete c;*/
     c = versions_->PickCompaction();
   }
 
@@ -792,7 +818,9 @@ void DBImpl::BackgroundCompaction() {
         Log(options_.info_log, "Moved #%lld to level-%d %lld bytes\n",
             static_cast<unsigned long long>(f->number),c->level() + 1,
             static_cast<unsigned long long>(f->file_size));
-
+        versions_->compaction_ptr_[c->level()] = f->largest;
+        versions_->compact_pointer_[c->level()] = f->largest.Encode().ToString();
+        c->edit()->SetCompactPointer(c->level(), f->largest);
       }
       status = versions_->LogAndApply(c->edit(), &mutex_,0);
       if (!status.ok()) {
@@ -806,23 +834,23 @@ void DBImpl::BackgroundCompaction() {
 
     }
     else {
-      hm_manager_->move_file(f->number,c->level() + 1);
-    
-      c->edit()->DeleteFile(c->level(), f->number);
-      c->edit()->AddFile(c->level() + 1, f->number, f->file_size,
-                        f->smallest, f->largest);
-      status = versions_->LogAndApply(c->edit(), &mutex_,0);
-      if (!status.ok()) {
-        RecordBackgroundError(status);
-      }
-      VersionSet::LevelSummaryStorage tmp;
-      Log(options_.info_log, "Moved #%lld to level-%d %lld bytes %s: %s\n",
-          static_cast<unsigned long long>(f->number),
-          c->level() + 1,
-          static_cast<unsigned long long>(f->file_size),
-          status.ToString().c_str(),
-          versions_->LevelSummary(&tmp));
+    hm_manager_->move_file(f->number,c->level() + 1);
+  
+    c->edit()->DeleteFile(c->level(), f->number);
+    c->edit()->AddFile(c->level() + 1, f->number, f->file_size,
+                      f->smallest, f->largest);
+    status = versions_->LogAndApply(c->edit(), &mutex_,0);
+    if (!status.ok()) {
+      RecordBackgroundError(status);
     }
+    VersionSet::LevelSummaryStorage tmp;
+    Log(options_.info_log, "Moved #%lld to level-%d %lld bytes %s: %s\n",
+        static_cast<unsigned long long>(f->number),
+        c->level() + 1,
+        static_cast<unsigned long long>(f->file_size),
+        status.ToString().c_str(),
+        versions_->LevelSummary(&tmp));
+   }
 
   } else {
     CompactionState* compact = new CompactionState(c);
@@ -915,6 +943,7 @@ Status DBImpl::OpenCompactionOutputFile(CompactionState* compact) {
 
 Status DBImpl::FinishCompactionOutputFile(CompactionState* compact,
                                           Iterator* input) {
+  int flag = 0;
   assert(compact != NULL);
   assert(compact->outfile != NULL);
   assert(compact->builder != NULL);
@@ -935,9 +964,22 @@ Status DBImpl::FinishCompactionOutputFile(CompactionState* compact,
   compact->total_bytes += current_bytes;
   delete compact->builder;
   compact->builder = NULL;
-
+  //jjy add
+  //compact->outfile
   // Finish and check for file errors
-  if (s.ok()) {
+#ifdef TEMP_FILE
+  if(versions_->icmp_.Compare
+  (compact->current_output()->largest.Encode() 
+  ,compact->compaction->largest_key.Encode()) > 0 && compact->compaction->level() > 1)
+  {
+    if(!compact->compaction->is_last && compact->compaction->dump_grandparents == 0){
+      compact->outfile->Setlevel(7); 
+      flag = 1;
+    }
+  }
+#endif
+
+   if (s.ok()) {
     s = compact->outfile->Sync();
   }
   if (s.ok()) {
@@ -946,7 +988,8 @@ Status DBImpl::FinishCompactionOutputFile(CompactionState* compact,
   if (s.ok() && current_entries > 0) {
     // Verify that the table is usable
 #if Verify_Table
-    if(compact->current_output()->level < 5){
+    if(compact->current_output()->level < 2 || flag == 1){
+
       const char* buf_file=compact->outfile->Getbuf();
       Iterator* iter = table_cache_->NewIterator(ReadOptions(),output_number,current_bytes,NULL,0,buf_file);
       s = iter->status();
@@ -1271,11 +1314,16 @@ Status DBImpl::MergeCompactionWork(CompactionState* compact){
   for(index=0;index < inputs.size() && !shutting_down_.Acquire_Load();index++){
     start_micros = env_->NowMicros();
     imm_micros = 0;
+    if(MAX_EST < compact->compaction->input_range_key[index]->container->EstimateSize()){
+      MAX_EST = compact->compaction->input_range_key[index]->container->EstimateSize();
+      MyLog("MaxEST is %d\n",MAX_EST);
+    }
     MyLog("Merge Compacting %d %ld bytes + table:[",index,compact->compaction->input_range_key[index]->container->EstimateSize());
     for(int i=0;i<compact->compaction->input_range_key[index]->file.size();i++){
       MyLog("%ld ",compact->compaction->input_range_key[index]->file[i]->number);
     }
     MyLog("]\n");
+
     input = inputs[index];
     for (input->SeekToFirst(); input->Valid() && !shutting_down_.Acquire_Load(); ) {
       // Prioritize immutable compaction work
@@ -1458,6 +1506,7 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
     MyLog("%ld ",compact->compaction->input(1,i)->number);
   }
   MyLog("\n");
+ 
 
   assert(versions_->NumLevelFiles(compact->compaction->level()) > 0);
   assert(compact->builder == NULL);
@@ -1501,7 +1550,32 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
         break;
       }
     }
-
+#ifdef SPLIT
+    if(compact->builder != NULL && 
+      compact->compaction->ShouldSplit(compact->current_output()->smallest.Encode(),key)
+    )
+    {
+      status = FinishCompactionOutputFile(compact, input);
+       Log(options_.info_log,"ShouldSplit CP:%s %s\n",key.ToString().c_str(),
+      compact->compaction->split.Encode().ToString().c_str());
+      if (!status.ok()) {
+        break;
+      }
+    }
+#endif  
+#ifdef TEMP_FILE
+  if(compact->builder != NULL && compact->compaction->level() > 0 && 
+      compact->compaction->TempSplit(compact->current_output()->smallest.Encode(),key)
+    )
+    {
+      status = FinishCompactionOutputFile(compact, input);
+       Log(options_.info_log,"ShouldSplit TF :%s %s\n",key.ToString().c_str(),
+      compact->compaction->largest_key.Encode().ToString().c_str());
+      if (!status.ok()) {
+        break;
+      }
+    }
+#endif
     // Handle key/value, add to state, etc.
     bool drop = false;
     if (!ParseInternalKey(key, &ikey)) {
@@ -1556,6 +1630,7 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
         }
       }
       if (compact->builder->NumEntries() == 0) {
+        
         compact->current_output()->smallest.DecodeFrom(key);
       }
       compact->current_output()->largest.DecodeFrom(key);
@@ -1608,6 +1683,7 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
     RecordBackgroundError(status);
   }
   VersionSet::LevelSummaryStorage tmp;
+  hm_manager_->get_split_info();
   Log(options_.info_log,
       "compacted to: %s", versions_->LevelSummary(&tmp));
   return status;
@@ -1685,7 +1761,7 @@ Status DBImpl::Get(const ReadOptions& options,
   } else {
     snapshot = versions_->LastSequence();
   }
-
+  
   MemTable* mem = mem_;
   MemTable* imm = imm_;
   Version* current = versions_->current();
@@ -1702,12 +1778,15 @@ Status DBImpl::Get(const ReadOptions& options,
     // First look in the memtable, then in the immutable memtable (if any).
     LookupKey lkey(key, snapshot);
     if (mem->Get(lkey, value, &s)) {
-      // Done
+      //done
     } else if (imm != NULL && imm->Get(lkey, value, &s)) {
       // Done
     } else {
+      double start = env_->NowMicros();
       s = current->Get(options, lkey, value, &stats);
       have_stat_update = true;
+      double end = env_->NowMicros();
+      hm_manager_-> total_get_time += (end-start);
     }
     mutex_.Lock();
   }

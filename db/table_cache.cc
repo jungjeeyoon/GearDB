@@ -9,6 +9,9 @@
 #include "leveldb/table.h"
 #include "util/coding.h"
 
+#include "../hm/hm_manager.h"
+#include "../hm/get_manager.h"
+
 namespace leveldb {
 
 struct TableAndFile {
@@ -50,6 +53,9 @@ Status TableCache::FindTable(uint64_t file_number, uint64_t file_size,
   Slice key(buf, sizeof(buf));
   *handle = cache_->Lookup(key);
   if (*handle == NULL) {
+    if(flag == 1){
+      Singleton::Gethmmanager()->NoCache++;
+    }
     std::string fname = TableFileName(dbname_, file_number);
     RandomAccessFile* file = NULL;
     Table* table = NULL;
@@ -111,12 +117,23 @@ Status TableCache::Get(const ReadOptions& options,
                        void* arg,
                        void (*saver)(void*, const Slice&, const Slice&)) {
   Cache::Handle* handle = NULL;
+  double start = env_->NowMicros();
   Status s = FindTable(file_number, file_size, &handle,1);
+  double end = env_->NowMicros();
+  Singleton::Gethmmanager()->find_table_time += (end-start);
   if (s.ok()) {
+    
     Table* t = reinterpret_cast<TableAndFile*>(cache_->Value(handle))->table;
+    start = env_->NowMicros();
+   
     s = t->InternalGet(options, k, arg, saver);
+    
+    end = env_->NowMicros();
+    Singleton::Gethmmanager()->Internal_get_time += (end-start);
     cache_->Release(handle);
+  
   }
+
   return s;
 }
 

@@ -75,11 +75,11 @@ class Version {
   // return OK.  Else return a non-OK status.  Fills *stats.
   // REQUIRES: lock is not held
   struct GetStats {
-    FileMetaData* seek_file;
-    int seek_file_level;
+	  FileMetaData* seek_file;
+	  int seek_file_level;
   };
   Status Get(const ReadOptions&, const LookupKey& key, std::string* val,
-             GetStats* stats);
+		  GetStats* stats);
 
   // Adds "stats" into the current state.  Returns true if a new
   // compaction may need to be triggered, false otherwise.
@@ -98,29 +98,32 @@ class Version {
   void Unref();
 
   void GetOverlappingInputs(
-      int level,
-      const InternalKey* begin,         // NULL means before all keys
-      const InternalKey* end,           // NULL means after all keys
-      std::vector<FileMetaData*>* inputs);
+		  int level,
+		  const InternalKey* begin,         // NULL means before all keys
+		  const InternalKey* end,           // NULL means after all keys
+		  std::vector<FileMetaData*>* inputs);
 
   // Returns true iff some file in the specified level overlaps
   // some part of [*smallest_user_key,*largest_user_key].
   // smallest_user_key==NULL represents a key smaller than all keys in the DB.
   // largest_user_key==NULL represents a key largest than all keys in the DB.
   bool OverlapInLevel(int level,
-                      const Slice* smallest_user_key,
-                      const Slice* largest_user_key);
+		  const Slice* smallest_user_key,
+		  const Slice* largest_user_key);
 
   // Return the level at which we should place a new memtable compaction
   // result that covers the range [smallest_user_key,largest_user_key].
   int PickLevelForMemTableOutput(const Slice& smallest_user_key,
-                                 const Slice& largest_user_key);
+		  const Slice& largest_user_key);
 
   int NumFiles(int level) const { return files_[level].size(); }
 
   // Return a human readable string that describes this version's contents.
   std::string DebugString() const;
-
+  int get_compaction_level(void){return compaction_level_;}
+  std::vector<FileMetaData*> get_files(int level){return files_[level];}
+  bool is_same = false;
+  InternalKey next_largest_key;
  private:
   friend class Compaction;
   friend class VersionSet;
@@ -134,8 +137,8 @@ class Version {
   //
   // REQUIRES: user portion of internal_key == user_key.
   void ForEachOverlapping(Slice user_key, Slice internal_key,
-                          void* arg,
-                          bool (*func)(void*, int, FileMetaData*));
+		  void* arg,
+		  bool (*func)(void*, int, FileMetaData*));
 
   VersionSet* vset_;            // VersionSet to which this Version belongs
   Version* next_;               // Next version in linked list
@@ -277,6 +280,11 @@ class VersionSet {
     char buffer[100];
   };
   const char* LevelSummary(LevelSummaryStorage* scratch) const;
+  const InternalKeyComparator icmp_;
+  
+  std::string compact_pointer_[config::kNumLevels];
+  InternalKey compaction_ptr_[config::kNumLevels];
+  bool force_first[config::kNumLevels] = {false};
 
  private:
   class Builder;
@@ -297,7 +305,7 @@ class VersionSet {
                  InternalKey* smallest,
                  InternalKey* largest);
 
-  void SetupOtherInputs(Compaction* c);
+  void SetupOtherInputs(Compaction* c, InternalKey next_cp);
 
   // Save current contents to *log
   Status WriteSnapshot(log::Writer* log);
@@ -308,7 +316,7 @@ class VersionSet {
   const std::string dbname_;
   const Options* const options_;
   TableCache* const table_cache_;
-  const InternalKeyComparator icmp_;
+  //const InternalKeyComparator icmp_;
   uint64_t next_file_number_;
   uint64_t manifest_file_number_;
   uint64_t last_sequence_;
@@ -323,7 +331,15 @@ class VersionSet {
 
   // Per-level key at which the next compaction at that level should start.
   // Either an empty string, or a valid InternalKey.
-  std::string compact_pointer_[config::kNumLevels];
+  
+  
+  //add by jjy
+ 
+
+  
+  InternalKey Small;
+  InternalKey Large;
+
 
   // No copying allowed
   VersionSet(const VersionSet&);
@@ -368,6 +384,9 @@ class Compaction {
   // before processing "internal_key".
   bool ShouldStopBefore(const Slice& internal_key);
 
+  bool ShouldSplit(const Slice& small, const Slice& large);
+
+  bool TempSplit(const Slice& small, const Slice& large);
   // Release the input version for the compaction, once the compaction
   // is successful.
   void ReleaseInputs();
@@ -385,9 +404,18 @@ class Compaction {
   bool IsTrivialZoneMove();
   bool IsTrivialTableMove(FileMetaData* file);
 
-  //////
-
+  ////// added by jjy
+  bool flag = false;
+  InternalKey largest_key;
+  InternalKey split;
+  InternalKey next_smallest_key;
+  InternalKey next_smallest_key2;
+  bool is_first = false;
+  bool is_last = false;
+  int check_split = 0;
+  int file_index = 0;
   //////added by lzw
+  
   HMManager* hm_manager_;
   int current_level;
   std::vector<FileMetaData*> overlap_file;
@@ -421,6 +449,7 @@ class Compaction {
   uint64_t max_output_file_size_;
   Version* input_version_;
   VersionEdit edit_;
+  
 
   // Each compaction reads inputs from "level_" and "level_+1"
   std::vector<FileMetaData*> inputs_[2];      // The two sets of inputs

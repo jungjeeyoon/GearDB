@@ -1,0 +1,708 @@
+zone is 0 write table:5 to level-2 zone:0 of size:4021682 bytes ofst:0 sect:7856 next:7856 write time:18173
+zone is 0 write table:49 to level-2 zone:0 of size:4034555 bytes ofst:7856 sect:7880 next:15736 write time:13673
+zone is 0 write table:52 to level-2 zone:0 of size:4034565 bytes ofst:15736 sect:7888 next:23624 write time:15950
+zone is 0 write table:61 to level-2 zone:0 of size:4034626 bytes ofst:23624 sect:7888 next:31512 write time:13262
+zone is 0 write table:62 to level-2 zone:0 of size:4034616 bytes ofst:31512 sect:7888 next:39400 write time:13071
+zone is 0 write table:63 to level-2 zone:0 of size:4034583 bytes ofst:39400 sect:7888 next:47288 write time:13256
+zone is 0 write table:64 to level-2 zone:0 of size:4034616 bytes ofst:47288 sect:7888 next:55176 write time:13244
+zone is 0 write table:65 to level-2 zone:0 of size:4034707 bytes ofst:55176 sect:7888 next:63064 write time:13184
+zone is 0 write table:66 to level-2 zone:0 of size:4034593 bytes ofst:63064 sect:7888 next:70952 write time:13347
+zone is 0 write table:67 to level-2 zone:0 of size:4034629 bytes ofst:70952 sect:7888 next:78840 write time:13296
+zone is 0 write table:68 to level-2 zone:0 of size:4034608 bytes ofst:78840 sect:7888 next:86728 write time:13441
+zone is 0 write table:69 to level-2 zone:0 of size:3871869 bytes ofst:86728 sect:7568 next:94296 write time:12751
+zone is 0 write table:80 to level-2 zone:0 of size:4034775 bytes ofst:94296 sect:7888 next:102184 write time:15025
+zone is 0 write table:83 to level-2 zone:0 of size:3216843 bytes ofst:102184 sect:6288 next:108472 write time:11331
+zone is 0 write table:101 to level-2 zone:0 of size:4034952 bytes ofst:108472 sect:7888 next:116360 write time:13268
+zone is 0 write table:102 to level-2 zone:0 of size:4034873 bytes ofst:116360 sect:7888 next:124248 write time:14175
+finish zone 0
+reset zone 0
+zone is 0 write table:273 to level-1 zone:0 of size:3859337 bytes ofst:0 sect:7544 next:7544 write time:16679
+zone is 0 write table:274 to level-1 zone:0 of size:4034597 bytes ofst:7544 sect:7888 next:15432 write time:14195
+zone is 0 write table:275 to level-1 zone:0 of size:1297430 bytes ofst:15432 sect:2536 next:17968 write time:4390
+zone is 0 write table:293 to level-1 zone:0 of size:4226 bytes ofst:17968 sect:16 next:17984 write time:122
+zone is 0 write table:367 to level-1 zone:0 of size:4034548 bytes ofst:17984 sect:7880 next:25864 write time:13492
+zone is 0 write table:378 to level-1 zone:0 of size:4034592 bytes ofst:25864 sect:7888 next:33752 write time:13891
+zone is 0 write table:379 to level-1 zone:0 of size:1472659 bytes ofst:33752 sect:2880 next:36632 write time:5441
+zone is 0 write table:380 to level-1 zone:0 of size:2332082 bytes ofst:36632 sect:4560 next:41192 write time:8512
+zone is 0 write table:381 to level-1 zone:0 of size:2511472 bytes ofst:41192 sect:4912 next:46104 write time:8326
+zone is 0 write table:382 to level-1 zone:0 of size:1702148 bytes ofst:46104 sect:3328 next:49432 write time:6338
+zone is 0 write table:383 to level-1 zone:0 of size:4034555 bytes ofst:49432 sect:7880 next:57312 write time:14371
+zone is 0 write table:386 to level-1 zone:0 of size:4034543 bytes ofst:57312 sect:7880 next:65192 write time:13967
+zone is 0 write table:393 to level-1 zone:0 of size:4034613 bytes ofst:65192 sect:7888 next:73080 write time:13895
+zone is 0 write table:394 to level-1 zone:0 of size:4034515 bytes ofst:73080 sect:7880 next:80960 write time:15081
+zone is 0 write table:395 to level-1 zone:0 of size:4034527 bytes ofst:80960 sect:7880 next:88840 write time:14111
+zone is 0 write table:396 to level-1 zone:0 of size:1264098 bytes ofst:88840 sect:2472 next:91312 write time:4635
+zone is 0 write table:397 to level-1 zone:0 of size:4034555 bytes ofst:91312 sect:7880 next:99192 write time:14550
+zone is 0 write table:398 to level-1 zone:0 of size:1380920 bytes ofst:99192 sect:2704 next:101896 write time:5434
+zone is 0 write table:399 to level-1 zone:0 of size:4034610 bytes ofst:101896 sect:7888 next:109784 write time:14045
+zone is 0 write table:400 to level-1 zone:0 of size:1539440 bytes ofst:109784 sect:3008 next:112792 write time:5603
+zone is 0 write table:401 to level-1 zone:0 of size:3763368 bytes ofst:112792 sect:7352 next:120144 write time:13467
+zone is 0 write table:406 to level-1 zone:0 of size:4034696 bytes ofst:120144 sect:7888 next:128032 write time:14788
+finish zone 0
+reset zone 10
+reset zone 10
+reset zone 0
+zone is 0 write table:758 to level-2 zone:0 of size:4034888 bytes ofst:0 sect:7888 next:7888 write time:16493
+zone is 0 write table:759 to level-2 zone:0 of size:4034993 bytes ofst:7888 sect:7888 next:15776 write time:12893
+zone is 0 write table:760 to level-2 zone:0 of size:4035044 bytes ofst:15776 sect:7888 next:23664 write time:12816
+zone is 0 write table:761 to level-2 zone:0 of size:4034977 bytes ofst:23664 sect:7888 next:31552 write time:13159
+zone is 0 write table:762 to level-2 zone:0 of size:4035011 bytes ofst:31552 sect:7888 next:39440 write time:12678
+zone is 0 write table:763 to level-2 zone:0 of size:4034991 bytes ofst:39440 sect:7888 next:47328 write time:13000
+zone is 0 write table:764 to level-2 zone:0 of size:4034999 bytes ofst:47328 sect:7888 next:55216 write time:12562
+zone is 0 write table:765 to level-2 zone:0 of size:4035019 bytes ofst:55216 sect:7888 next:63104 write time:13055
+zone is 0 write table:766 to level-2 zone:0 of size:4034989 bytes ofst:63104 sect:7888 next:70992 write time:12435
+zone is 0 write table:767 to level-2 zone:0 of size:4034988 bytes ofst:70992 sect:7888 next:78880 write time:13599
+zone is 0 write table:768 to level-2 zone:0 of size:4035026 bytes ofst:78880 sect:7888 next:86768 write time:12558
+zone is 0 write table:769 to level-2 zone:0 of size:4035018 bytes ofst:86768 sect:7888 next:94656 write time:13846
+zone is 0 write table:770 to level-2 zone:0 of size:4034995 bytes ofst:94656 sect:7888 next:102544 write time:12793
+zone is 0 write table:771 to level-2 zone:0 of size:4035081 bytes ofst:102544 sect:7888 next:110432 write time:13375
+zone is 0 write table:772 to level-2 zone:0 of size:4035082 bytes ofst:110432 sect:7888 next:118320 write time:12972
+zone is 0 write table:773 to level-2 zone:0 of size:4035063 bytes ofst:118320 sect:7888 next:126208 write time:13392
+finish zone 0
+reset zone 0
+reset zone 10
+zone is 0 write table:980 to level-2 zone:0 of size:4035095 bytes ofst:0 sect:7888 next:7888 write time:17792
+zone is 0 write table:981 to level-2 zone:0 of size:4035088 bytes ofst:7888 sect:7888 next:15776 write time:14362
+zone is 0 write table:982 to level-2 zone:0 of size:4035087 bytes ofst:15776 sect:7888 next:23664 write time:14110
+zone is 0 write table:983 to level-2 zone:0 of size:4035098 bytes ofst:23664 sect:7888 next:31552 write time:15136
+zone is 0 write table:984 to level-2 zone:0 of size:4035100 bytes ofst:31552 sect:7888 next:39440 write time:14154
+zone is 0 write table:985 to level-2 zone:0 of size:4035039 bytes ofst:39440 sect:7888 next:47328 write time:14902
+zone is 0 write table:986 to level-2 zone:0 of size:4034826 bytes ofst:47328 sect:7888 next:55216 write time:14124
+zone is 0 write table:987 to level-2 zone:0 of size:4034889 bytes ofst:55216 sect:7888 next:63104 write time:14767
+zone is 0 write table:988 to level-2 zone:0 of size:4035074 bytes ofst:63104 sect:7888 next:70992 write time:14407
+zone is 0 write table:989 to level-2 zone:0 of size:4035138 bytes ofst:70992 sect:7888 next:78880 write time:14684
+zone is 0 write table:990 to level-2 zone:0 of size:4035119 bytes ofst:78880 sect:7888 next:86768 write time:14159
+zone is 0 write table:991 to level-2 zone:0 of size:4035108 bytes ofst:86768 sect:7888 next:94656 write time:15216
+zone is 0 write table:992 to level-2 zone:0 of size:4035109 bytes ofst:94656 sect:7888 next:102544 write time:14237
+zone is 0 write table:993 to level-2 zone:0 of size:4035094 bytes ofst:102544 sect:7888 next:110432 write time:14865
+zone is 0 write table:994 to level-2 zone:0 of size:4035103 bytes ofst:110432 sect:7888 next:118320 write time:14104
+zone is 0 write table:995 to level-2 zone:0 of size:4035085 bytes ofst:118320 sect:7888 next:126208 write time:14791
+finish zone 0
+reset zone 0
+zone is 0 write table:1134 to level-0 zone:0 of size:4021540 bytes ofst:0 sect:7856 next:7856 write time:16227
+zone is 0 write table:1137 to level-0 zone:0 of size:4021637 bytes ofst:7856 sect:7856 next:15712 write time:13054
+zone is 0 write table:1139 to level-0 zone:0 of size:4021629 bytes ofst:15712 sect:7856 next:23568 write time:13296
+zone is 0 write table:1141 to level-0 zone:0 of size:4021593 bytes ofst:23568 sect:7856 next:31424 write time:13422
+zone is 0 write table:1143 to level-0 zone:0 of size:4021581 bytes ofst:31424 sect:7856 next:39280 write time:12862
+zone is 0 write table:1145 to level-0 zone:0 of size:4021607 bytes ofst:39280 sect:7856 next:47136 write time:13266
+zone is 0 write table:1147 to level-0 zone:0 of size:4021622 bytes ofst:47136 sect:7856 next:54992 write time:12544
+zone is 0 write table:1149 to level-0 zone:0 of size:4021606 bytes ofst:54992 sect:7856 next:62848 write time:13166
+zone is 0 write table:1211 to level-0 zone:0 of size:4021583 bytes ofst:62848 sect:7856 next:70704 write time:12620
+zone is 0 write table:1254 to level-0 zone:0 of size:4021593 bytes ofst:70704 sect:7856 next:78560 write time:13477
+zone is 0 write table:1257 to level-0 zone:0 of size:4021508 bytes ofst:78560 sect:7856 next:86416 write time:12911
+zone is 0 write table:1259 to level-0 zone:0 of size:4021608 bytes ofst:86416 sect:7856 next:94272 write time:13589
+zone is 0 write table:1261 to level-0 zone:0 of size:4021665 bytes ofst:94272 sect:7856 next:102128 write time:13181
+zone is 0 write table:1263 to level-0 zone:0 of size:4021544 bytes ofst:102128 sect:7856 next:109984 write time:13906
+zone is 0 write table:1265 to level-0 zone:0 of size:4021621 bytes ofst:109984 sect:7856 next:117840 write time:13272
+zone is 0 write table:1267 to level-0 zone:0 of size:4021597 bytes ofst:117840 sect:7856 next:125696 write time:13796
+finish zone 0
+reset zone 0
+zone is 0 write table:1326 to level-2 zone:0 of size:4034972 bytes ofst:0 sect:7888 next:7888 write time:17380
+zone is 0 write table:1327 to level-2 zone:0 of size:4034993 bytes ofst:7888 sect:7888 next:15776 write time:14266
+zone is 0 write table:1328 to level-2 zone:0 of size:4035123 bytes ofst:15776 sect:7888 next:23664 write time:13785
+zone is 0 write table:1329 to level-2 zone:0 of size:4035185 bytes ofst:23664 sect:7888 next:31552 write time:14824
+zone is 0 write table:1330 to level-2 zone:0 of size:4035157 bytes ofst:31552 sect:7888 next:39440 write time:14002
+zone is 0 write table:1331 to level-2 zone:0 of size:4035179 bytes ofst:39440 sect:7888 next:47328 write time:14681
+zone is 0 write table:1332 to level-2 zone:0 of size:4035215 bytes ofst:47328 sect:7888 next:55216 write time:13694
+zone is 0 write table:1333 to level-2 zone:0 of size:4035200 bytes ofst:55216 sect:7888 next:63104 write time:14570
+zone is 0 write table:1334 to level-2 zone:0 of size:4035186 bytes ofst:63104 sect:7888 next:70992 write time:14276
+zone is 0 write table:1335 to level-2 zone:0 of size:4035162 bytes ofst:70992 sect:7888 next:78880 write time:14613
+zone is 0 write table:1336 to level-2 zone:0 of size:4035168 bytes ofst:78880 sect:7888 next:86768 write time:13914
+zone is 0 write table:1337 to level-2 zone:0 of size:4035135 bytes ofst:86768 sect:7888 next:94656 write time:14889
+zone is 0 write table:1338 to level-2 zone:0 of size:4035173 bytes ofst:94656 sect:7888 next:102544 write time:13912
+zone is 0 write table:1339 to level-2 zone:0 of size:4035139 bytes ofst:102544 sect:7888 next:110432 write time:14627
+zone is 0 write table:1340 to level-2 zone:0 of size:4035174 bytes ofst:110432 sect:7888 next:118320 write time:14080
+zone is 0 write table:1341 to level-2 zone:0 of size:4035178 bytes ofst:118320 sect:7888 next:126208 write time:14797
+finish zone 0
+reset zone 0
+zone is 0 write table:1611 to level-3 zone:0 of size:4035228 bytes ofst:0 sect:7888 next:7888 write time:15006
+zone is 0 write table:1614 to level-3 zone:0 of size:4035209 bytes ofst:7888 sect:7888 next:15776 write time:13595
+zone is 0 write table:1627 to level-3 zone:0 of size:4035208 bytes ofst:15776 sect:7888 next:23664 write time:12540
+zone is 0 write table:1628 to level-3 zone:0 of size:4035176 bytes ofst:23664 sect:7888 next:31552 write time:13433
+zone is 0 write table:1629 to level-3 zone:0 of size:4035215 bytes ofst:31552 sect:7888 next:39440 write time:13053
+zone is 0 write table:1630 to level-3 zone:0 of size:4035185 bytes ofst:39440 sect:7888 next:47328 write time:13426
+zone is 0 write table:1631 to level-3 zone:0 of size:4035183 bytes ofst:47328 sect:7888 next:55216 write time:12742
+zone is 0 write table:1632 to level-3 zone:0 of size:4035205 bytes ofst:55216 sect:7888 next:63104 write time:13183
+zone is 0 write table:1633 to level-3 zone:0 of size:4035182 bytes ofst:63104 sect:7888 next:70992 write time:12897
+zone is 0 write table:1634 to level-3 zone:0 of size:4035224 bytes ofst:70992 sect:7888 next:78880 write time:13719
+zone is 0 write table:1635 to level-3 zone:0 of size:4035173 bytes ofst:78880 sect:7888 next:86768 write time:12847
+zone is 0 write table:1636 to level-3 zone:0 of size:4035210 bytes ofst:86768 sect:7888 next:94656 write time:13855
+zone is 0 write table:1637 to level-3 zone:0 of size:4035199 bytes ofst:94656 sect:7888 next:102544 write time:12908
+zone is 0 write table:1638 to level-3 zone:0 of size:4035201 bytes ofst:102544 sect:7888 next:110432 write time:13381
+zone is 0 write table:1639 to level-3 zone:0 of size:4035201 bytes ofst:110432 sect:7888 next:118320 write time:13106
+zone is 0 write table:1640 to level-3 zone:0 of size:4035208 bytes ofst:118320 sect:7888 next:126208 write time:13539
+finish zone 0
+reset zone 10
+reset zone 20
+reset zone 30
+reset zone 0
+reset zone 10
+reset zone 20
+zone is 0 write table:2491 to level-0 zone:0 of size:4021681 bytes ofst:0 sect:7856 next:7856 write time:16557
+zone is 0 write table:2493 to level-0 zone:0 of size:4021603 bytes ofst:7856 sect:7856 next:15712 write time:12875
+zone is 0 write table:2517 to level-0 zone:0 of size:4021630 bytes ofst:15712 sect:7856 next:23568 write time:13224
+zone is 0 write table:2519 to level-0 zone:0 of size:4021570 bytes ofst:23568 sect:7856 next:31424 write time:12977
+zone is 0 write table:2521 to level-0 zone:0 of size:4021567 bytes ofst:31424 sect:7856 next:39280 write time:12527
+zone is 0 write table:2523 to level-0 zone:0 of size:4021646 bytes ofst:39280 sect:7856 next:47136 write time:13464
+zone is 0 write table:2525 to level-0 zone:0 of size:4021658 bytes ofst:47136 sect:7856 next:54992 write time:12662
+zone is 0 write table:2527 to level-0 zone:0 of size:4021660 bytes ofst:54992 sect:7856 next:62848 write time:13387
+zone is 0 write table:2529 to level-0 zone:0 of size:4021702 bytes ofst:62848 sect:7856 next:70704 write time:12758
+zone is 0 write table:2531 to level-0 zone:0 of size:4021617 bytes ofst:70704 sect:7856 next:78560 write time:13063
+zone is 0 write table:2534 to level-0 zone:0 of size:4021734 bytes ofst:78560 sect:7856 next:86416 write time:12808
+zone is 0 write table:2595 to level-0 zone:0 of size:4021577 bytes ofst:86416 sect:7856 next:94272 write time:13518
+zone is 0 write table:2662 to level-0 zone:0 of size:4021593 bytes ofst:94272 sect:7856 next:102128 write time:12458
+zone is 0 write table:2692 to level-0 zone:0 of size:4021600 bytes ofst:102128 sect:7856 next:109984 write time:13562
+zone is 0 write table:2695 to level-0 zone:0 of size:4021573 bytes ofst:109984 sect:7856 next:117840 write time:13086
+zone is 0 write table:2697 to level-0 zone:0 of size:4021553 bytes ofst:117840 sect:7856 next:125696 write time:13270
+finish zone 0
+reset zone 0
+zone is 0 write table:2766 to level-3 zone:0 of size:4035274 bytes ofst:0 sect:7888 next:7888 write time:18687
+zone is 0 write table:2767 to level-3 zone:0 of size:4035308 bytes ofst:7888 sect:7888 next:15776 write time:14861
+zone is 0 write table:2768 to level-3 zone:0 of size:4035297 bytes ofst:15776 sect:7888 next:23664 write time:14375
+zone is 0 write table:2769 to level-3 zone:0 of size:4035300 bytes ofst:23664 sect:7888 next:31552 write time:14807
+zone is 0 write table:2770 to level-3 zone:0 of size:3843319 bytes ofst:31552 sect:7512 next:39064 write time:13573
+zone is 0 write table:2879 to level-3 zone:0 of size:4035322 bytes ofst:39064 sect:7888 next:46952 write time:13391
+zone is 0 write table:2880 to level-3 zone:0 of size:4035333 bytes ofst:46952 sect:7888 next:54840 write time:13285
+zone is 0 write table:2881 to level-3 zone:0 of size:4035328 bytes ofst:54840 sect:7888 next:62728 write time:13382
+zone is 0 write table:2882 to level-3 zone:0 of size:4035312 bytes ofst:62728 sect:7888 next:70616 write time:13311
+zone is 0 write table:2883 to level-3 zone:0 of size:4035337 bytes ofst:70616 sect:7888 next:78504 write time:13296
+zone is 0 write table:2884 to level-3 zone:0 of size:4035285 bytes ofst:78504 sect:7888 next:86392 write time:14472
+zone is 0 write table:2885 to level-3 zone:0 of size:4035340 bytes ofst:86392 sect:7888 next:94280 write time:14457
+zone is 0 write table:2886 to level-3 zone:0 of size:4035336 bytes ofst:94280 sect:7888 next:102168 write time:14667
+zone is 0 write table:2887 to level-3 zone:0 of size:4035308 bytes ofst:102168 sect:7888 next:110056 write time:15549
+zone is 0 write table:2888 to level-3 zone:0 of size:4035317 bytes ofst:110056 sect:7888 next:117944 write time:15892
+zone is 0 write table:2889 to level-3 zone:0 of size:4035307 bytes ofst:117944 sect:7888 next:125832 write time:14484
+finish zone 0
+reset zone 10
+reset zone 20
+move table:3000 from level-2 to level-3 zone:2 of size:3 MB write time: 12873 read time: 29526
+move table:3001 from level-2 to level-3 zone:2 of size:3 MB write time: 13115 read time: 27228
+move table:3002 from level-2 to level-3 zone:2 of size:3 MB write time: 12953 read time: 29490
+reset zone 30
+reset zone 20
+reset zone 0
+zone is 0 write table:3597 to level-0 zone:0 of size:4021662 bytes ofst:0 sect:7856 next:7856 write time:16183
+zone is 0 write table:3599 to level-0 zone:0 of size:4021561 bytes ofst:7856 sect:7856 next:15712 write time:13245
+zone is 0 write table:3626 to level-0 zone:0 of size:4021565 bytes ofst:15712 sect:7856 next:23568 write time:12788
+zone is 0 write table:3629 to level-0 zone:0 of size:4021650 bytes ofst:23568 sect:7856 next:31424 write time:13193
+zone is 0 write table:3631 to level-0 zone:0 of size:4021524 bytes ofst:31424 sect:7856 next:39280 write time:12509
+zone is 0 write table:3633 to level-0 zone:0 of size:4021639 bytes ofst:39280 sect:7856 next:47136 write time:13163
+zone is 0 write table:3635 to level-0 zone:0 of size:4021615 bytes ofst:47136 sect:7856 next:54992 write time:12815
+zone is 0 write table:3637 to level-0 zone:0 of size:4021643 bytes ofst:54992 sect:7856 next:62848 write time:13116
+zone is 0 write table:3639 to level-0 zone:0 of size:4021590 bytes ofst:62848 sect:7856 next:70704 write time:12771
+zone is 0 write table:3641 to level-0 zone:0 of size:4021653 bytes ofst:70704 sect:7856 next:78560 write time:13249
+zone is 0 write table:3643 to level-0 zone:0 of size:4021653 bytes ofst:78560 sect:7856 next:86416 write time:12919
+zone is 0 write table:3704 to level-0 zone:0 of size:4021638 bytes ofst:86416 sect:7856 next:94272 write time:13660
+zone is 0 write table:3765 to level-0 zone:0 of size:4021561 bytes ofst:94272 sect:7856 next:102128 write time:12543
+reset zone 10
+reset zone 20
+zone is 0 write table:3811 to level-0 zone:0 of size:4021625 bytes ofst:102128 sect:7856 next:109984 write time:13405
+zone is 0 write table:3813 to level-0 zone:0 of size:4021556 bytes ofst:109984 sect:7856 next:117840 write time:12693
+zone is 0 write table:3815 to level-0 zone:0 of size:4021558 bytes ofst:117840 sect:7856 next:125696 write time:13192
+finish zone 0
+reset zone 0
+zone is 0 write table:3873 to level-3 zone:0 of size:4035391 bytes ofst:0 sect:7888 next:7888 write time:16393
+zone is 0 write table:3874 to level-3 zone:0 of size:4035361 bytes ofst:7888 sect:7888 next:15776 write time:13410
+zone is 0 write table:3875 to level-3 zone:0 of size:4035340 bytes ofst:15776 sect:7888 next:23664 write time:12730
+zone is 0 write table:3876 to level-3 zone:0 of size:2808372 bytes ofst:23664 sect:5488 next:29152 write time:9409
+zone is 0 write table:3975 to level-3 zone:0 of size:4035383 bytes ofst:29152 sect:7888 next:37040 write time:12843
+zone is 0 write table:3976 to level-3 zone:0 of size:4035353 bytes ofst:37040 sect:7888 next:44928 write time:13102
+zone is 0 write table:3977 to level-3 zone:0 of size:4035366 bytes ofst:44928 sect:7888 next:52816 write time:12453
+zone is 0 write table:3978 to level-3 zone:0 of size:4035392 bytes ofst:52816 sect:7888 next:60704 write time:13613
+zone is 0 write table:3979 to level-3 zone:0 of size:4035345 bytes ofst:60704 sect:7888 next:68592 write time:12788
+zone is 0 write table:3980 to level-3 zone:0 of size:4035354 bytes ofst:68592 sect:7888 next:76480 write time:13544
+zone is 0 write table:3981 to level-3 zone:0 of size:4035387 bytes ofst:76480 sect:7888 next:84368 write time:12733
+zone is 0 write table:3982 to level-3 zone:0 of size:4035365 bytes ofst:84368 sect:7888 next:92256 write time:13507
+zone is 0 write table:3983 to level-3 zone:0 of size:4035427 bytes ofst:92256 sect:7888 next:100144 write time:12974
+zone is 0 write table:3984 to level-3 zone:0 of size:4035349 bytes ofst:100144 sect:7888 next:108032 write time:13693
+zone is 0 write table:3985 to level-3 zone:0 of size:4035402 bytes ofst:108032 sect:7888 next:115920 write time:12784
+zone is 0 write table:3986 to level-3 zone:0 of size:2695681 bytes ofst:115920 sect:5272 next:121192 write time:9137
+zone is 0 write table:3987 to level-3 zone:0 of size:4035392 bytes ofst:121192 sect:7888 next:129080 write time:13479
+finish zone 0
+reset zone 20
+reset zone 30
+reset zone 0
+reset zone 20
+zone is 0 write table:4848 to level-0 zone:0 of size:4021611 bytes ofst:0 sect:7856 next:7856 write time:16318
+zone is 0 write table:4850 to level-0 zone:0 of size:4021609 bytes ofst:7856 sect:7856 next:15712 write time:13258
+zone is 0 write table:4883 to level-0 zone:0 of size:4021557 bytes ofst:15712 sect:7856 next:23568 write time:13272
+zone is 0 write table:4885 to level-0 zone:0 of size:4021598 bytes ofst:23568 sect:7856 next:31424 write time:13256
+zone is 0 write table:4887 to level-0 zone:0 of size:4021684 bytes ofst:31424 sect:7856 next:39280 write time:12685
+zone is 0 write table:4889 to level-0 zone:0 of size:4021640 bytes ofst:39280 sect:7856 next:47136 write time:13539
+zone is 0 write table:4891 to level-0 zone:0 of size:4021643 bytes ofst:47136 sect:7856 next:54992 write time:12415
+zone is 0 write table:4893 to level-0 zone:0 of size:4021597 bytes ofst:54992 sect:7856 next:62848 write time:13512
+zone is 0 write table:4895 to level-0 zone:0 of size:4021589 bytes ofst:62848 sect:7856 next:70704 write time:13043
+zone is 0 write table:4897 to level-0 zone:0 of size:4021758 bytes ofst:70704 sect:7856 next:78560 write time:13179
+zone is 0 write table:4899 to level-0 zone:0 of size:4021689 bytes ofst:78560 sect:7856 next:86416 write time:13222
+zone is 0 write table:4959 to level-0 zone:0 of size:4021591 bytes ofst:86416 sect:7856 next:94272 write time:13179
+zone is 0 write table:5022 to level-0 zone:0 of size:4021592 bytes ofst:94272 sect:7856 next:102128 write time:12866
+zone is 0 write table:5085 to level-0 zone:0 of size:4021607 bytes ofst:102128 sect:7856 next:109984 write time:13750
+reset zone 40
+zone is 0 write table:5117 to level-0 zone:0 of size:4021630 bytes ofst:109984 sect:7856 next:117840 write time:12802
+zone is 0 write table:5120 to level-0 zone:0 of size:4021556 bytes ofst:117840 sect:7856 next:125696 write time:13493
+finish zone 0
+reset zone 0
+zone is 0 write table:5186 to level-3 zone:0 of size:4035410 bytes ofst:0 sect:7888 next:7888 write time:16361
+zone is 0 write table:5187 to level-3 zone:0 of size:4035402 bytes ofst:7888 sect:7888 next:15776 write time:13331
+zone is 0 write table:5188 to level-3 zone:0 of size:4035410 bytes ofst:15776 sect:7888 next:23664 write time:12547
+zone is 0 write table:5189 to level-3 zone:0 of size:4035438 bytes ofst:23664 sect:7888 next:31552 write time:13002
+zone is 0 write table:5190 to level-3 zone:0 of size:4035418 bytes ofst:31552 sect:7888 next:39440 write time:12581
+zone is 0 write table:5191 to level-3 zone:0 of size:4035397 bytes ofst:39440 sect:7888 next:47328 write time:13048
+zone is 0 write table:5192 to level-3 zone:0 of size:4035384 bytes ofst:47328 sect:7888 next:55216 write time:12427
+zone is 0 write table:5193 to level-3 zone:0 of size:4035410 bytes ofst:55216 sect:7888 next:63104 write time:12976
+zone is 0 write table:5194 to level-3 zone:0 of size:4035394 bytes ofst:63104 sect:7888 next:70992 write time:12465
+zone is 0 write table:5195 to level-3 zone:0 of size:4035408 bytes ofst:70992 sect:7888 next:78880 write time:13299
+zone is 0 write table:5196 to level-3 zone:0 of size:4035381 bytes ofst:78880 sect:7888 next:86768 write time:12293
+zone is 0 write table:5197 to level-3 zone:0 of size:4035403 bytes ofst:86768 sect:7888 next:94656 write time:13190
+zone is 0 write table:5198 to level-3 zone:0 of size:4035384 bytes ofst:94656 sect:7888 next:102544 write time:12911
+zone is 0 write table:5199 to level-3 zone:0 of size:4035406 bytes ofst:102544 sect:7888 next:110432 write time:13275
+zone is 0 write table:5200 to level-3 zone:0 of size:4035409 bytes ofst:110432 sect:7888 next:118320 write time:12748
+zone is 0 write table:5201 to level-3 zone:0 of size:4035416 bytes ofst:118320 sect:7888 next:126208 write time:13251
+finish zone 0
+reset zone 20
+reset zone 30
+reset zone 20
+reset zone 0
+zone is 0 write table:6264 to level-0 zone:0 of size:4021643 bytes ofst:0 sect:7856 next:7856 write time:15904
+zone is 0 write table:6266 to level-0 zone:0 of size:4021615 bytes ofst:7856 sect:7856 next:15712 write time:13084
+zone is 0 write table:6302 to level-0 zone:0 of size:4021668 bytes ofst:15712 sect:7856 next:23568 write time:12852
+zone is 0 write table:6305 to level-0 zone:0 of size:4021594 bytes ofst:23568 sect:7856 next:31424 write time:13259
+zone is 0 write table:6307 to level-0 zone:0 of size:4021569 bytes ofst:31424 sect:7856 next:39280 write time:12779
+zone is 0 write table:6309 to level-0 zone:0 of size:4021597 bytes ofst:39280 sect:7856 next:47136 write time:13520
+zone is 0 write table:6311 to level-0 zone:0 of size:4021644 bytes ofst:47136 sect:7856 next:54992 write time:12390
+zone is 0 write table:6313 to level-0 zone:0 of size:4021639 bytes ofst:54992 sect:7856 next:62848 write time:13023
+zone is 0 write table:6315 to level-0 zone:0 of size:4021605 bytes ofst:62848 sect:7856 next:70704 write time:12591
+zone is 0 write table:6317 to level-0 zone:0 of size:4021666 bytes ofst:70704 sect:7856 next:78560 write time:13316
+zone is 0 write table:6319 to level-0 zone:0 of size:4021585 bytes ofst:78560 sect:7856 next:86416 write time:13074
+zone is 0 write table:6381 to level-0 zone:0 of size:4021643 bytes ofst:86416 sect:7856 next:94272 write time:13600
+zone is 0 write table:6446 to level-0 zone:0 of size:4021623 bytes ofst:94272 sect:7856 next:102128 write time:12589
+zone is 0 write table:6513 to level-0 zone:0 of size:4021588 bytes ofst:102128 sect:7856 next:109984 write time:13471
+reset zone 40
+zone is 0 write table:6534 to level-0 zone:0 of size:4021560 bytes ofst:109984 sect:7856 next:117840 write time:12682
+zone is 0 write table:6537 to level-0 zone:0 of size:4021557 bytes ofst:117840 sect:7856 next:125696 write time:13612
+finish zone 0
+reset zone 0
+zone is 0 write table:6614 to level-2 zone:0 of size:4035421 bytes ofst:0 sect:7888 next:7888 write time:16672
+zone is 0 write table:6615 to level-2 zone:0 of size:3008710 bytes ofst:7888 sect:5880 next:13768 write time:9941
+zone is 0 write table:6628 to level-2 zone:0 of size:4034856 bytes ofst:13768 sect:7888 next:21656 write time:13283
+zone is 0 write table:6629 to level-2 zone:0 of size:4034937 bytes ofst:21656 sect:7888 next:29544 write time:13135
+zone is 0 write table:6630 to level-2 zone:0 of size:4034957 bytes ofst:29544 sect:7888 next:37432 write time:13200
+zone is 0 write table:6631 to level-2 zone:0 of size:4034916 bytes ofst:37432 sect:7888 next:45320 write time:13207
+zone is 0 write table:6632 to level-2 zone:0 of size:4034955 bytes ofst:45320 sect:7888 next:53208 write time:13145
+zone is 0 write table:6633 to level-2 zone:0 of size:4034889 bytes ofst:53208 sect:7888 next:61096 write time:13574
+zone is 0 write table:6634 to level-2 zone:0 of size:4035031 bytes ofst:61096 sect:7888 next:68984 write time:13282
+zone is 0 write table:6635 to level-2 zone:0 of size:4034997 bytes ofst:68984 sect:7888 next:76872 write time:13455
+zone is 0 write table:6636 to level-2 zone:0 of size:4034965 bytes ofst:76872 sect:7888 next:84760 write time:13127
+zone is 0 write table:6637 to level-2 zone:0 of size:4034951 bytes ofst:84760 sect:7888 next:92648 write time:13110
+zone is 0 write table:6638 to level-2 zone:0 of size:4034854 bytes ofst:92648 sect:7888 next:100536 write time:13394
+zone is 0 write table:6639 to level-2 zone:0 of size:4034914 bytes ofst:100536 sect:7888 next:108424 write time:13359
+zone is 0 write table:6640 to level-2 zone:0 of size:4034987 bytes ofst:108424 sect:7888 next:116312 write time:13205
+zone is 0 write table:6641 to level-2 zone:0 of size:4034999 bytes ofst:116312 sect:7888 next:124200 write time:13539
+finish zone 0
+reset zone 50
+reset zone 20
+reset zone 30
+reset zone 0
+zone is 0 write table:7145 to level-3 zone:0 of size:4035447 bytes ofst:0 sect:7888 next:7888 write time:16365
+zone is 0 write table:7146 to level-3 zone:0 of size:4035419 bytes ofst:7888 sect:7888 next:15776 write time:12939
+zone is 0 write table:7147 to level-3 zone:0 of size:4035418 bytes ofst:15776 sect:7888 next:23664 write time:12287
+zone is 0 write table:7148 to level-3 zone:0 of size:4035407 bytes ofst:23664 sect:7888 next:31552 write time:13123
+zone is 0 write table:7149 to level-3 zone:0 of size:4035429 bytes ofst:31552 sect:7888 next:39440 write time:13018
+zone is 0 write table:7150 to level-3 zone:0 of size:4035442 bytes ofst:39440 sect:7888 next:47328 write time:12993
+zone is 0 write table:7151 to level-3 zone:0 of size:3100514 bytes ofst:47328 sect:6056 next:53384 write time:9746
+zone is 0 write table:7167 to level-3 zone:0 of size:4035441 bytes ofst:53384 sect:7888 next:61272 write time:13198
+zone is 0 write table:7170 to level-3 zone:0 of size:4035445 bytes ofst:61272 sect:7888 next:69160 write time:13191
+zone is 0 write table:7187 to level-3 zone:0 of size:4035432 bytes ofst:69160 sect:7888 next:77048 write time:13190
+zone is 0 write table:7188 to level-3 zone:0 of size:4035436 bytes ofst:77048 sect:7888 next:84936 write time:13379
+zone is 0 write table:7189 to level-3 zone:0 of size:4035422 bytes ofst:84936 sect:7888 next:92824 write time:13254
+zone is 0 write table:7190 to level-3 zone:0 of size:4035403 bytes ofst:92824 sect:7888 next:100712 write time:13225
+zone is 0 write table:7191 to level-3 zone:0 of size:4035405 bytes ofst:100712 sect:7888 next:108600 write time:13691
+zone is 0 write table:7192 to level-3 zone:0 of size:4035414 bytes ofst:108600 sect:7888 next:116488 write time:13092
+zone is 0 write table:7193 to level-3 zone:0 of size:4035428 bytes ofst:116488 sect:7888 next:124376 write time:13050
+finish zone 0
+reset zone 40
+reset zone 20
+reset zone 50
+reset zone 0
+reset zone 30
+zone is 0 write table:8460 to level-3 zone:0 of size:4035436 bytes ofst:0 sect:7888 next:7888 write time:16613
+zone is 0 write table:8471 to level-3 zone:0 of size:4035444 bytes ofst:7888 sect:7888 next:15776 write time:13327
+zone is 0 write table:8472 to level-3 zone:0 of size:4035443 bytes ofst:15776 sect:7888 next:23664 write time:12864
+zone is 0 write table:8473 to level-3 zone:0 of size:4035433 bytes ofst:23664 sect:7888 next:31552 write time:13464
+zone is 0 write table:8474 to level-3 zone:0 of size:4035439 bytes ofst:31552 sect:7888 next:39440 write time:12688
+zone is 0 write table:8475 to level-3 zone:0 of size:4035441 bytes ofst:39440 sect:7888 next:47328 write time:13470
+zone is 0 write table:8476 to level-3 zone:0 of size:4035416 bytes ofst:47328 sect:7888 next:55216 write time:13037
+zone is 0 write table:8477 to level-3 zone:0 of size:4035436 bytes ofst:55216 sect:7888 next:63104 write time:13443
+zone is 0 write table:8478 to level-3 zone:0 of size:4035415 bytes ofst:63104 sect:7888 next:70992 write time:12914
+zone is 0 write table:8479 to level-3 zone:0 of size:4035423 bytes ofst:70992 sect:7888 next:78880 write time:13682
+zone is 0 write table:8480 to level-3 zone:0 of size:4035429 bytes ofst:78880 sect:7888 next:86768 write time:12346
+zone is 0 write table:8481 to level-3 zone:0 of size:4035452 bytes ofst:86768 sect:7888 next:94656 write time:13642
+zone is 0 write table:8482 to level-3 zone:0 of size:1205939 bytes ofst:94656 sect:2360 next:97016 write time:4107
+zone is 0 write table:8498 to level-3 zone:0 of size:4035433 bytes ofst:97016 sect:7888 next:104904 write time:13396
+zone is 0 write table:8501 to level-3 zone:0 of size:4035433 bytes ofst:104904 sect:7888 next:112792 write time:14198
+zone is 0 write table:8518 to level-3 zone:0 of size:4035443 bytes ofst:112792 sect:7888 next:120680 write time:13482
+zone is 0 write table:8519 to level-3 zone:0 of size:4035455 bytes ofst:120680 sect:7888 next:128568 write time:13874
+finish zone 0
+reset zone 20
+reset zone 20
+reset zone 10
+reset zone 50
+reset zone 0
+zone is 0 write table:9566 to level-3 zone:0 of size:4035444 bytes ofst:0 sect:7888 next:7888 write time:15785
+zone is 0 write table:9567 to level-3 zone:0 of size:4035454 bytes ofst:7888 sect:7888 next:15776 write time:13347
+zone is 0 write table:9568 to level-3 zone:0 of size:4035447 bytes ofst:15776 sect:7888 next:23664 write time:12617
+zone is 0 write table:9569 to level-3 zone:0 of size:4035439 bytes ofst:23664 sect:7888 next:31552 write time:13314
+zone is 0 write table:9570 to level-3 zone:0 of size:4035462 bytes ofst:31552 sect:7888 next:39440 write time:12880
+zone is 0 write table:9571 to level-3 zone:0 of size:4035445 bytes ofst:39440 sect:7888 next:47328 write time:13455
+zone is 0 write table:9572 to level-3 zone:0 of size:4035458 bytes ofst:47328 sect:7888 next:55216 write time:12751
+zone is 0 write table:9573 to level-3 zone:0 of size:4035430 bytes ofst:55216 sect:7888 next:63104 write time:13495
+zone is 0 write table:9574 to level-3 zone:0 of size:4035447 bytes ofst:63104 sect:7888 next:70992 write time:12464
+zone is 0 write table:9575 to level-3 zone:0 of size:4035440 bytes ofst:70992 sect:7888 next:78880 write time:13323
+zone is 0 write table:9576 to level-3 zone:0 of size:4035435 bytes ofst:78880 sect:7888 next:86768 write time:12741
+zone is 0 write table:9577 to level-3 zone:0 of size:4035449 bytes ofst:86768 sect:7888 next:94656 write time:13546
+zone is 0 write table:9578 to level-3 zone:0 of size:4035459 bytes ofst:94656 sect:7888 next:102544 write time:13149
+zone is 0 write table:9579 to level-3 zone:0 of size:4035442 bytes ofst:102544 sect:7888 next:110432 write time:13573
+zone is 0 write table:9580 to level-3 zone:0 of size:4035452 bytes ofst:110432 sect:7888 next:118320 write time:12646
+zone is 0 write table:9581 to level-3 zone:0 of size:542484 bytes ofst:118320 sect:1064 next:119384 write time:2046
+zone is 0 write table:9596 to level-3 zone:0 of size:4035453 bytes ofst:119384 sect:7888 next:127272 write time:14040
+finish zone 0
+reset zone 10
+reset zone 30
+reset zone 60
+reset zone 20
+reset zone 10
+reset zone 0
+zone is 0 write table:10916 to level-1 zone:0 of size:4034557 bytes ofst:0 sect:7880 next:7880 write time:16565
+zone is 0 write table:10917 to level-1 zone:0 of size:4034586 bytes ofst:7880 sect:7888 next:15768 write time:13478
+zone is 0 write table:10918 to level-1 zone:0 of size:3496254 bytes ofst:15768 sect:6832 next:22600 write time:11718
+zone is 0 write table:10919 to level-1 zone:0 of size:2056684 bytes ofst:22600 sect:4024 next:26624 write time:6845
+zone is 0 write table:10920 to level-1 zone:0 of size:4034590 bytes ofst:26624 sect:7888 next:34512 write time:12845
+zone is 0 write table:10921 to level-1 zone:0 of size:3204250 bytes ofst:34512 sect:6264 next:40776 write time:10765
+zone is 0 write table:10922 to level-1 zone:0 of size:4034549 bytes ofst:40776 sect:7880 next:48656 write time:13669
+zone is 0 write table:10923 to level-1 zone:0 of size:1944058 bytes ofst:48656 sect:3800 next:52456 write time:6553
+zone is 0 write table:10924 to level-1 zone:0 of size:4034512 bytes ofst:52456 sect:7880 next:60336 write time:13422
+zone is 0 write table:10925 to level-1 zone:0 of size:2974727 bytes ofst:60336 sect:5816 next:66152 write time:9851
+zone is 0 write table:10926 to level-1 zone:0 of size:1522736 bytes ofst:66152 sect:2976 next:69128 write time:5309
+zone is 0 write table:10927 to level-1 zone:0 of size:817727 bytes ofst:69128 sect:1600 next:70728 write time:3003
+reset zone 50
+reset zone 10
+reset zone 0
+zone is 0 write table:11190 to level-3 zone:0 of size:4035490 bytes ofst:0 sect:7888 next:7888 write time:16726
+zone is 0 write table:11191 to level-3 zone:0 of size:4035470 bytes ofst:7888 sect:7888 next:15776 write time:12808
+zone is 0 write table:11192 to level-3 zone:0 of size:4035472 bytes ofst:15776 sect:7888 next:23664 write time:12735
+zone is 0 write table:11193 to level-3 zone:0 of size:4035462 bytes ofst:23664 sect:7888 next:31552 write time:13117
+zone is 0 write table:11194 to level-3 zone:0 of size:4035472 bytes ofst:31552 sect:7888 next:39440 write time:12929
+zone is 0 write table:11195 to level-3 zone:0 of size:4035477 bytes ofst:39440 sect:7888 next:47328 write time:13018
+zone is 0 write table:11196 to level-3 zone:0 of size:4035467 bytes ofst:47328 sect:7888 next:55216 write time:12572
+zone is 0 write table:11197 to level-3 zone:0 of size:4035465 bytes ofst:55216 sect:7888 next:63104 write time:12909
+zone is 0 write table:11198 to level-3 zone:0 of size:4035456 bytes ofst:63104 sect:7888 next:70992 write time:12795
+zone is 0 write table:11199 to level-3 zone:0 of size:4035460 bytes ofst:70992 sect:7888 next:78880 write time:12957
+zone is 0 write table:11200 to level-3 zone:0 of size:4035479 bytes ofst:78880 sect:7888 next:86768 write time:12434
+zone is 0 write table:11201 to level-3 zone:0 of size:4035471 bytes ofst:86768 sect:7888 next:94656 write time:13422
+zone is 0 write table:11202 to level-3 zone:0 of size:4035425 bytes ofst:94656 sect:7888 next:102544 write time:12741
+zone is 0 write table:11203 to level-3 zone:0 of size:4035097 bytes ofst:102544 sect:7888 next:110432 write time:13267
+zone is 0 write table:11204 to level-3 zone:0 of size:4035455 bytes ofst:110432 sect:7888 next:118320 write time:12671
+zone is 0 write table:11205 to level-3 zone:0 of size:2762499 bytes ofst:118320 sect:5400 next:123720 write time:9266
+finish zone 0
+reset zone 30
+reset zone 10
+reset zone 0
+zone is 0 write table:11519 to level-1 zone:0 of size:4034614 bytes ofst:0 sect:7888 next:7888 write time:16220
+zone is 0 write table:11520 to level-1 zone:0 of size:3884383 bytes ofst:7888 sect:7592 next:15480 write time:12979
+zone is 0 write table:11521 to level-1 zone:0 of size:3792559 bytes ofst:15480 sect:7408 next:22888 write time:12637
+zone is 0 write table:11522 to level-1 zone:0 of size:2528219 bytes ofst:22888 sect:4944 next:27832 write time:8677
+zone is 0 write table:11523 to level-1 zone:0 of size:4034595 bytes ofst:27832 sect:7888 next:35720 write time:13623
+zone is 0 write table:11524 to level-1 zone:0 of size:1485217 bytes ofst:35720 sect:2904 next:38624 write time:5227
+zone is 0 write table:11525 to level-1 zone:0 of size:4034601 bytes ofst:38624 sect:7888 next:46512 write time:13083
+zone is 0 write table:11526 to level-1 zone:0 of size:1798044 bytes ofst:46512 sect:3512 next:50024 write time:6168
+zone is 0 write table:11527 to level-1 zone:0 of size:4034517 bytes ofst:50024 sect:7880 next:57904 write time:13668
+zone is 0 write table:11528 to level-1 zone:0 of size:4034565 bytes ofst:57904 sect:7888 next:65792 write time:13378
+zone is 0 write table:11529 to level-1 zone:0 of size:771810 bytes ofst:65792 sect:1512 next:67304 write time:2791
+zone is 0 write table:11530 to level-1 zone:0 of size:1109738 bytes ofst:67304 sect:2168 next:69472 write time:4171
+zone is 0 write table:11531 to level-1 zone:0 of size:642492 bytes ofst:69472 sect:1256 next:70728 write time:2484
+reset zone 20
+reset zone 60
+reset zone 0
+zone is 0 write table:11849 to level-0 zone:0 of size:4021612 bytes ofst:0 sect:7856 next:7856 write time:16345
+zone is 0 write table:11851 to level-0 zone:0 of size:4021607 bytes ofst:7856 sect:7856 next:15712 write time:13180
+zone is 0 write table:11854 to level-0 zone:0 of size:4021662 bytes ofst:15712 sect:7856 next:23568 write time:13103
+zone is 0 write table:11856 to level-0 zone:0 of size:4021608 bytes ofst:23568 sect:7856 next:31424 write time:13327
+zone is 0 write table:11858 to level-0 zone:0 of size:4021643 bytes ofst:31424 sect:7856 next:39280 write time:12769
+zone is 0 write table:11876 to level-0 zone:0 of size:4021624 bytes ofst:39280 sect:7856 next:47136 write time:13425
+zone is 0 write table:11879 to level-0 zone:0 of size:4021638 bytes ofst:47136 sect:7856 next:54992 write time:12553
+zone is 0 write table:11881 to level-0 zone:0 of size:4021556 bytes ofst:54992 sect:7856 next:62848 write time:13322
+zone is 0 write table:11883 to level-0 zone:0 of size:4021624 bytes ofst:62848 sect:7856 next:70704 write time:13008
+zone is 0 write table:11885 to level-0 zone:0 of size:4021708 bytes ofst:70704 sect:7856 next:78560 write time:13433
+zone is 0 write table:11887 to level-0 zone:0 of size:4021638 bytes ofst:78560 sect:7856 next:86416 write time:13333
+zone is 0 write table:11889 to level-0 zone:0 of size:4021606 bytes ofst:86416 sect:7856 next:94272 write time:13379
+zone is 0 write table:11891 to level-0 zone:0 of size:4021625 bytes ofst:94272 sect:7856 next:102128 write time:12912
+zone is 0 write table:11893 to level-0 zone:0 of size:4021652 bytes ofst:102128 sect:7856 next:109984 write time:13658
+zone is 0 write table:11951 to level-0 zone:0 of size:4021587 bytes ofst:109984 sect:7856 next:117840 write time:12915
+zone is 0 write table:12009 to level-0 zone:0 of size:4021648 bytes ofst:117840 sect:7856 next:125696 write time:13595
+finish zone 0
+reset zone 0
+zone is 0 write table:12184 to level-2 zone:0 of size:4035285 bytes ofst:0 sect:7888 next:7888 write time:17927
+zone is 0 write table:12185 to level-2 zone:0 of size:4035293 bytes ofst:7888 sect:7888 next:15776 write time:15464
+zone is 0 write table:12186 to level-2 zone:0 of size:4035305 bytes ofst:15776 sect:7888 next:23664 write time:14374
+zone is 0 write table:12187 to level-2 zone:0 of size:1698250 bytes ofst:23664 sect:3320 next:26984 write time:6261
+zone is 0 write table:12188 to level-2 zone:0 of size:4035037 bytes ofst:26984 sect:7888 next:34872 write time:13775
+zone is 0 write table:12189 to level-2 zone:0 of size:4035049 bytes ofst:34872 sect:7888 next:42760 write time:13301
+zone is 0 write table:12190 to level-2 zone:0 of size:4034925 bytes ofst:42760 sect:7888 next:50648 write time:13303
+zone is 0 write table:12191 to level-2 zone:0 of size:4035180 bytes ofst:50648 sect:7888 next:58536 write time:13637
+zone is 0 write table:12192 to level-2 zone:0 of size:4035086 bytes ofst:58536 sect:7888 next:66424 write time:13236
+zone is 0 write table:12193 to level-2 zone:0 of size:4035158 bytes ofst:66424 sect:7888 next:74312 write time:13630
+zone is 0 write table:12194 to level-2 zone:0 of size:4035145 bytes ofst:74312 sect:7888 next:82200 write time:13497
+zone is 0 write table:12195 to level-2 zone:0 of size:4035017 bytes ofst:82200 sect:7888 next:90088 write time:13404
+zone is 0 write table:12196 to level-2 zone:0 of size:4034964 bytes ofst:90088 sect:7888 next:97976 write time:13471
+zone is 0 write table:12197 to level-2 zone:0 of size:4034958 bytes ofst:97976 sect:7888 next:105864 write time:13620
+zone is 0 write table:12198 to level-2 zone:0 of size:4035008 bytes ofst:105864 sect:7888 next:113752 write time:13302
+zone is 0 write table:12199 to level-2 zone:0 of size:4035010 bytes ofst:113752 sect:7888 next:121640 write time:13635
+zone is 0 write table:12200 to level-2 zone:0 of size:4034983 bytes ofst:121640 sect:7888 next:129528 write time:13383
+finish zone 0
+reset zone 50
+reset zone 30
+reset zone 20
+reset zone 0
+zone is 0 write table:12743 to level-0 zone:0 of size:4021593 bytes ofst:0 sect:7856 next:7856 write time:16296
+zone is 0 write table:12764 to level-0 zone:0 of size:4021633 bytes ofst:7856 sect:7856 next:15712 write time:13290
+zone is 0 write table:12772 to level-0 zone:0 of size:4021711 bytes ofst:15712 sect:7856 next:23568 write time:12980
+zone is 0 write table:12775 to level-0 zone:0 of size:4021603 bytes ofst:23568 sect:7856 next:31424 write time:13235
+zone is 0 write table:12777 to level-0 zone:0 of size:4021600 bytes ofst:31424 sect:7856 next:39280 write time:12755
+zone is 0 write table:12779 to level-0 zone:0 of size:4021563 bytes ofst:39280 sect:7856 next:47136 write time:13511
+zone is 0 write table:12781 to level-0 zone:0 of size:4021611 bytes ofst:47136 sect:7856 next:54992 write time:12412
+zone is 0 write table:12783 to level-0 zone:0 of size:4021640 bytes ofst:54992 sect:7856 next:62848 write time:13500
+zone is 0 write table:12785 to level-0 zone:0 of size:4021578 bytes ofst:62848 sect:7856 next:70704 write time:12744
+zone is 0 write table:12787 to level-0 zone:0 of size:4021624 bytes ofst:70704 sect:7856 next:78560 write time:13233
+zone is 0 write table:12826 to level-0 zone:0 of size:4021641 bytes ofst:78560 sect:7856 next:86416 write time:12887
+zone is 0 write table:12878 to level-0 zone:0 of size:4021543 bytes ofst:86416 sect:7856 next:94272 write time:13608
+zone is 0 write table:12940 to level-0 zone:0 of size:4021599 bytes ofst:94272 sect:7856 next:102128 write time:12922
+reset zone 40
+reset zone 10
+reset zone 30
+zone is 0 write table:13119 to level-0 zone:0 of size:4021610 bytes ofst:102128 sect:7856 next:109984 write time:13456
+zone is 0 write table:13121 to level-0 zone:0 of size:4021568 bytes ofst:109984 sect:7856 next:117840 write time:12612
+zone is 0 write table:13123 to level-0 zone:0 of size:4021606 bytes ofst:117840 sect:7856 next:125696 write time:13360
+finish zone 0
+reset zone 0
+zone is 0 write table:13189 to level-2 zone:0 of size:4035310 bytes ofst:0 sect:7888 next:7888 write time:16397
+zone is 0 write table:13190 to level-2 zone:0 of size:4035367 bytes ofst:7888 sect:7888 next:15776 write time:13688
+zone is 0 write table:13191 to level-2 zone:0 of size:4035332 bytes ofst:15776 sect:7888 next:23664 write time:12527
+zone is 0 write table:13192 to level-2 zone:0 of size:4035348 bytes ofst:23664 sect:7888 next:31552 write time:13278
+zone is 0 write table:13193 to level-2 zone:0 of size:4035348 bytes ofst:31552 sect:7888 next:39440 write time:12551
+zone is 0 write table:13194 to level-2 zone:0 of size:4035372 bytes ofst:39440 sect:7888 next:47328 write time:13514
+zone is 0 write table:13195 to level-2 zone:0 of size:4035328 bytes ofst:47328 sect:7888 next:55216 write time:12788
+zone is 0 write table:13196 to level-2 zone:0 of size:4035352 bytes ofst:55216 sect:7888 next:63104 write time:13355
+zone is 0 write table:13197 to level-2 zone:0 of size:1644035 bytes ofst:63104 sect:3216 next:66320 write time:5659
+zone is 0 write table:13198 to level-2 zone:0 of size:4035037 bytes ofst:66320 sect:7888 next:74208 write time:13385
+zone is 0 write table:13199 to level-2 zone:0 of size:4035186 bytes ofst:74208 sect:7888 next:82096 write time:13078
+zone is 0 write table:13200 to level-2 zone:0 of size:4035117 bytes ofst:82096 sect:7888 next:89984 write time:13073
+zone is 0 write table:13201 to level-2 zone:0 of size:4034941 bytes ofst:89984 sect:7888 next:97872 write time:12621
+zone is 0 write table:13202 to level-2 zone:0 of size:4035207 bytes ofst:97872 sect:7888 next:105760 write time:13652
+zone is 0 write table:13203 to level-2 zone:0 of size:4035158 bytes ofst:105760 sect:7888 next:113648 write time:12571
+zone is 0 write table:13204 to level-2 zone:0 of size:4035189 bytes ofst:113648 sect:7888 next:121536 write time:13541
+zone is 0 write table:13205 to level-2 zone:0 of size:4035261 bytes ofst:121536 sect:7888 next:129424 write time:12957
+finish zone 0
+reset zone 60
+reset zone 50
+reset zone 0
+zone is 0 write table:13819 to level-1 zone:0 of size:4034626 bytes ofst:0 sect:7888 next:7888 write time:16225
+zone is 0 write table:13820 to level-1 zone:0 of size:25082 bytes ofst:7888 sect:56 next:7944 write time:367
+zone is 0 write table:13821 to level-1 zone:0 of size:4034595 bytes ofst:7944 sect:7888 next:15832 write time:13300
+zone is 0 write table:13822 to level-1 zone:0 of size:4034554 bytes ofst:15832 sect:7880 next:23712 write time:13657
+zone is 0 write table:13823 to level-1 zone:0 of size:805186 bytes ofst:23712 sect:1576 next:25288 write time:2995
+zone is 0 write table:13824 to level-1 zone:0 of size:4034566 bytes ofst:25288 sect:7888 next:33176 write time:13646
+zone is 0 write table:13825 to level-1 zone:0 of size:1172323 bytes ofst:33176 sect:2296 next:35472 write time:4228
+zone is 0 write table:13826 to level-1 zone:0 of size:2369654 bytes ofst:35472 sect:4632 next:40104 write time:8243
+zone is 0 write table:13827 to level-1 zone:0 of size:4034648 bytes ofst:40104 sect:7888 next:47992 write time:13499
+zone is 0 write table:13828 to level-1 zone:0 of size:4034582 bytes ofst:47992 sect:7888 next:55880 write time:13652
+zone is 0 write table:13829 to level-1 zone:0 of size:4034553 bytes ofst:55880 sect:7880 next:63760 write time:13555
+zone is 0 write table:13830 to level-1 zone:0 of size:325446 bytes ofst:63760 sect:640 next:64400 write time:1581
+zone is 0 write table:13831 to level-1 zone:0 of size:2286211 bytes ofst:64400 sect:4472 next:68872 write time:7875
+zone is 0 write table:13832 to level-1 zone:0 of size:959561 bytes ofst:68872 sect:1880 next:70752 write time:3246
+reset zone 20
+reset zone 0
+zone is 0 write table:14121 to level-0 zone:0 of size:4021639 bytes ofst:0 sect:7856 next:7856 write time:16528
+zone is 0 write table:14124 to level-0 zone:0 of size:4021613 bytes ofst:7856 sect:7856 next:15712 write time:13104
+zone is 0 write table:14146 to level-0 zone:0 of size:4021650 bytes ofst:15712 sect:7856 next:23568 write time:13222
+zone is 0 write table:14149 to level-0 zone:0 of size:4021566 bytes ofst:23568 sect:7856 next:31424 write time:13225
+zone is 0 write table:14151 to level-0 zone:0 of size:4021594 bytes ofst:31424 sect:7856 next:39280 write time:12967
+zone is 0 write table:14153 to level-0 zone:0 of size:4021561 bytes ofst:39280 sect:7856 next:47136 write time:13464
+zone is 0 write table:14155 to level-0 zone:0 of size:4021610 bytes ofst:47136 sect:7856 next:54992 write time:12690
+zone is 0 write table:14157 to level-0 zone:0 of size:4021628 bytes ofst:54992 sect:7856 next:62848 write time:13523
+zone is 0 write table:14159 to level-0 zone:0 of size:4021620 bytes ofst:62848 sect:7856 next:70704 write time:13047
+zone is 0 write table:14161 to level-0 zone:0 of size:4021550 bytes ofst:70704 sect:7856 next:78560 write time:13395
+zone is 0 write table:14164 to level-0 zone:0 of size:4021630 bytes ofst:78560 sect:7856 next:86416 write time:12715
+zone is 0 write table:14230 to level-0 zone:0 of size:4021563 bytes ofst:86416 sect:7856 next:94272 write time:13866
+zone is 0 write table:14280 to level-0 zone:0 of size:4021577 bytes ofst:94272 sect:7856 next:102128 write time:13426
+zone is 0 write table:14312 to level-0 zone:0 of size:4021594 bytes ofst:102128 sect:7856 next:109984 write time:13733
+reset zone 10
+reset zone 30
+reset zone 40
+zone is 0 write table:14396 to level-0 zone:0 of size:4021577 bytes ofst:109984 sect:7856 next:117840 write time:12887
+zone is 0 write table:14399 to level-0 zone:0 of size:4021551 bytes ofst:117840 sect:7856 next:125696 write time:13289
+finish zone 0
+reset zone 0
+zone is 0 write table:14470 to level-3 zone:0 of size:4035499 bytes ofst:0 sect:7888 next:7888 write time:16125
+zone is 0 write table:14471 to level-3 zone:0 of size:4035515 bytes ofst:7888 sect:7888 next:15776 write time:13732
+zone is 0 write table:14472 to level-3 zone:0 of size:4035492 bytes ofst:15776 sect:7888 next:23664 write time:12542
+zone is 0 write table:14473 to level-3 zone:0 of size:4035481 bytes ofst:23664 sect:7888 next:31552 write time:13277
+zone is 0 write table:14474 to level-3 zone:0 of size:4035482 bytes ofst:31552 sect:7888 next:39440 write time:12838
+zone is 0 write table:14475 to level-3 zone:0 of size:4035482 bytes ofst:39440 sect:7888 next:47328 write time:13367
+zone is 0 write table:14476 to level-3 zone:0 of size:4035497 bytes ofst:47328 sect:7888 next:55216 write time:13012
+zone is 0 write table:14477 to level-3 zone:0 of size:4035454 bytes ofst:55216 sect:7888 next:63104 write time:13249
+zone is 0 write table:14478 to level-3 zone:0 of size:4035491 bytes ofst:63104 sect:7888 next:70992 write time:12658
+zone is 0 write table:14479 to level-3 zone:0 of size:4035499 bytes ofst:70992 sect:7888 next:78880 write time:13635
+zone is 0 write table:14480 to level-3 zone:0 of size:4035487 bytes ofst:78880 sect:7888 next:86768 write time:12610
+zone is 0 write table:14481 to level-3 zone:0 of size:4035501 bytes ofst:86768 sect:7888 next:94656 write time:13698
+zone is 0 write table:14482 to level-3 zone:0 of size:4035482 bytes ofst:94656 sect:7888 next:102544 write time:13059
+zone is 0 write table:14483 to level-3 zone:0 of size:4035499 bytes ofst:102544 sect:7888 next:110432 write time:13391
+zone is 0 write table:14484 to level-3 zone:0 of size:4035503 bytes ofst:110432 sect:7888 next:118320 write time:12913
+zone is 0 write table:14485 to level-3 zone:0 of size:4035474 bytes ofst:118320 sect:7888 next:126208 write time:13481
+finish zone 0
+reset zone 20
+reset zone 60
+reset zone 50
+reset zone 10
+reset zone 0
+reset zone 30
+reset zone 40
+zone is 0 write table:15784 to level-0 zone:0 of size:4021663 bytes ofst:0 sect:7856 next:7856 write time:16407
+zone is 0 write table:15786 to level-0 zone:0 of size:4021607 bytes ofst:7856 sect:7856 next:15712 write time:13319
+zone is 0 write table:15788 to level-0 zone:0 of size:4021640 bytes ofst:15712 sect:7856 next:23568 write time:13238
+zone is 0 write table:15827 to level-0 zone:0 of size:4021714 bytes ofst:23568 sect:7856 next:31424 write time:13505
+zone is 0 write table:15829 to level-0 zone:0 of size:4021714 bytes ofst:31424 sect:7856 next:39280 write time:12850
+zone is 0 write table:15831 to level-0 zone:0 of size:4021534 bytes ofst:39280 sect:7856 next:47136 write time:13428
+zone is 0 write table:15833 to level-0 zone:0 of size:4021641 bytes ofst:47136 sect:7856 next:54992 write time:12825
+zone is 0 write table:15835 to level-0 zone:0 of size:4021541 bytes ofst:54992 sect:7856 next:62848 write time:13501
+zone is 0 write table:15837 to level-0 zone:0 of size:4021655 bytes ofst:62848 sect:7856 next:70704 write time:13266
+zone is 0 write table:15839 to level-0 zone:0 of size:4021685 bytes ofst:70704 sect:7856 next:78560 write time:13534
+zone is 0 write table:15841 to level-0 zone:0 of size:4021646 bytes ofst:78560 sect:7856 next:86416 write time:13308
+zone is 0 write table:15843 to level-0 zone:0 of size:4021628 bytes ofst:86416 sect:7856 next:94272 write time:13805
+zone is 0 write table:15905 to level-0 zone:0 of size:4021627 bytes ofst:94272 sect:7856 next:102128 write time:12858
+zone is 0 write table:15957 to level-0 zone:0 of size:4021564 bytes ofst:102128 sect:7856 next:109984 write time:13776
+zone is 0 write table:15992 to level-0 zone:0 of size:4021655 bytes ofst:109984 sect:7856 next:117840 write time:13009
+reset zone 20
+zone is 0 write table:16100 to level-0 zone:0 of size:4021634 bytes ofst:117840 sect:7856 next:125696 write time:13488
+finish zone 0
+reset zone 0
+zone is 0 write table:16154 to level-2 zone:0 of size:4035500 bytes ofst:0 sect:7888 next:7888 write time:16201
+zone is 0 write table:16155 to level-2 zone:0 of size:4035483 bytes ofst:7888 sect:7888 next:15776 write time:13257
+zone is 0 write table:16156 to level-2 zone:0 of size:4035507 bytes ofst:15776 sect:7888 next:23664 write time:12600
+zone is 0 write table:16157 to level-2 zone:0 of size:2595566 bytes ofst:23664 sect:5072 next:28736 write time:8603
+zone is 0 write table:16158 to level-2 zone:0 of size:4034997 bytes ofst:28736 sect:7888 next:36624 write time:12827
+zone is 0 write table:16159 to level-2 zone:0 of size:4035252 bytes ofst:36624 sect:7888 next:44512 write time:13269
+zone is 0 write table:16160 to level-2 zone:0 of size:4035334 bytes ofst:44512 sect:7888 next:52400 write time:12788
+zone is 0 write table:16161 to level-2 zone:0 of size:4035380 bytes ofst:52400 sect:7888 next:60288 write time:13099
+zone is 0 write table:16162 to level-2 zone:0 of size:4035349 bytes ofst:60288 sect:7888 next:68176 write time:12416
+zone is 0 write table:16163 to level-2 zone:0 of size:4035355 bytes ofst:68176 sect:7888 next:76064 write time:13512
+zone is 0 write table:16164 to level-2 zone:0 of size:4035358 bytes ofst:76064 sect:7888 next:83952 write time:12408
+zone is 0 write table:16165 to level-2 zone:0 of size:4035049 bytes ofst:83952 sect:7888 next:91840 write time:13416
+zone is 0 write table:16166 to level-2 zone:0 of size:4034982 bytes ofst:91840 sect:7888 next:99728 write time:12884
+zone is 0 write table:16167 to level-2 zone:0 of size:4034972 bytes ofst:99728 sect:7888 next:107616 write time:13570
+zone is 0 write table:16168 to level-2 zone:0 of size:4034983 bytes ofst:107616 sect:7888 next:115504 write time:12749
+zone is 0 write table:16169 to level-2 zone:0 of size:4035011 bytes ofst:115504 sect:7888 next:123392 write time:13019
+finish zone 0
+reset zone 60
+reset zone 0
+zone is 0 write table:16771 to level-3 zone:0 of size:4035496 bytes ofst:0 sect:7888 next:7888 write time:16162
+zone is 0 write table:16783 to level-3 zone:0 of size:4035507 bytes ofst:7888 sect:7888 next:15776 write time:13018
+zone is 0 write table:16784 to level-3 zone:0 of size:4035507 bytes ofst:15776 sect:7888 next:23664 write time:12775
+zone is 0 write table:16785 to level-3 zone:0 of size:4035526 bytes ofst:23664 sect:7888 next:31552 write time:13191
+zone is 0 write table:16786 to level-3 zone:0 of size:4035516 bytes ofst:31552 sect:7888 next:39440 write time:13051
+zone is 0 write table:16787 to level-3 zone:0 of size:4035499 bytes ofst:39440 sect:7888 next:47328 write time:13174
+zone is 0 write table:16788 to level-3 zone:0 of size:4035520 bytes ofst:47328 sect:7888 next:55216 write time:12611
+zone is 0 write table:16789 to level-3 zone:0 of size:4035485 bytes ofst:55216 sect:7888 next:63104 write time:13046
+zone is 0 write table:16790 to level-3 zone:0 of size:4035497 bytes ofst:63104 sect:7888 next:70992 write time:12390
+zone is 0 write table:16791 to level-3 zone:0 of size:4035513 bytes ofst:70992 sect:7888 next:78880 write time:13571
+zone is 0 write table:16792 to level-3 zone:0 of size:4035471 bytes ofst:78880 sect:7888 next:86768 write time:12483
+zone is 0 write table:16793 to level-3 zone:0 of size:4035292 bytes ofst:86768 sect:7888 next:94656 write time:13467
+zone is 0 write table:16794 to level-3 zone:0 of size:1548118 bytes ofst:94656 sect:3024 next:97680 write time:4951
+zone is 0 write table:16913 to level-3 zone:0 of size:4035514 bytes ofst:97680 sect:7888 next:105568 write time:13486
+zone is 0 write table:16914 to level-3 zone:0 of size:4035501 bytes ofst:105568 sect:7888 next:113456 write time:13211
+zone is 0 write table:16915 to level-3 zone:0 of size:4035518 bytes ofst:113456 sect:7888 next:121344 write time:13366
+zone is 0 write table:16916 to level-3 zone:0 of size:4035503 bytes ofst:121344 sect:7888 next:129232 write time:12897
+finish zone 0
+reset zone 50
+reset zone 10
+reset zone 20
+reset zone 30
+reset zone 40
+reset zone 10
+reset zone 20
+reset zone 0
+zone is 0 write table:17912 to level-2 zone:0 of size:4035402 bytes ofst:0 sect:7888 next:7888 write time:17208
+zone is 0 write table:17913 to level-2 zone:0 of size:4035397 bytes ofst:7888 sect:7888 next:15776 write time:13352
+zone is 0 write table:17914 to level-2 zone:0 of size:4035392 bytes ofst:15776 sect:7888 next:23664 write time:12541
+zone is 0 write table:17915 to level-2 zone:0 of size:4035269 bytes ofst:23664 sect:7888 next:31552 write time:13159
+zone is 0 write table:17916 to level-2 zone:0 of size:4034903 bytes ofst:31552 sect:7888 next:39440 write time:12537
+zone is 0 write table:17917 to level-2 zone:0 of size:4034875 bytes ofst:39440 sect:7888 next:47328 write time:13583
+zone is 0 write table:17918 to level-2 zone:0 of size:4034893 bytes ofst:47328 sect:7888 next:55216 write time:12666
+zone is 0 write table:17919 to level-2 zone:0 of size:4034900 bytes ofst:55216 sect:7888 next:63104 write time:13210
+zone is 0 write table:17920 to level-2 zone:0 of size:4034853 bytes ofst:63104 sect:7888 next:70992 write time:12738
+zone is 0 write table:17921 to level-2 zone:0 of size:4035108 bytes ofst:70992 sect:7888 next:78880 write time:13488
+zone is 0 write table:17922 to level-2 zone:0 of size:4035124 bytes ofst:78880 sect:7888 next:86768 write time:12388
+zone is 0 write table:17923 to level-2 zone:0 of size:4035098 bytes ofst:86768 sect:7888 next:94656 write time:13285
+zone is 0 write table:17924 to level-2 zone:0 of size:4035124 bytes ofst:94656 sect:7888 next:102544 write time:12615
+zone is 0 write table:17925 to level-2 zone:0 of size:4035121 bytes ofst:102544 sect:7888 next:110432 write time:13325
+zone is 0 write table:17926 to level-2 zone:0 of size:4034859 bytes ofst:110432 sect:7888 next:118320 write time:12987
+zone is 0 write table:17927 to level-2 zone:0 of size:4034986 bytes ofst:118320 sect:7888 next:126208 write time:13486
+finish zone 0
+reset zone 60
+reset zone 30
+reset zone 40
+reset zone 0
+zone is 0 write table:18370 to level-1 zone:0 of size:1218204 bytes ofst:0 sect:2384 next:2384 write time:4264
+zone is 0 write table:18378 to level-1 zone:0 of size:4034584 bytes ofst:2384 sect:7888 next:10272 write time:13715
+zone is 0 write table:18380 to level-1 zone:0 of size:183608 bytes ofst:10272 sect:360 next:10632 write time:1020
+zone is 0 write table:18381 to level-1 zone:0 of size:4034498 bytes ofst:10632 sect:7880 next:18512 write time:13389
+zone is 0 write table:18382 to level-1 zone:0 of size:1472653 bytes ofst:18512 sect:2880 next:21392 write time:5443
+zone is 0 write table:18383 to level-1 zone:0 of size:3575573 bytes ofst:21392 sect:6984 next:28376 write time:12011
+zone is 0 write table:18384 to level-1 zone:0 of size:4034541 bytes ofst:28376 sect:7880 next:36256 write time:13590
+zone is 0 write table:18385 to level-1 zone:0 of size:33428 bytes ofst:36256 sect:72 next:36328 write time:262
+zone is 0 write table:18386 to level-1 zone:0 of size:1522757 bytes ofst:36328 sect:2976 next:39304 write time:5303
+zone is 0 write table:18389 to level-1 zone:0 of size:2511552 bytes ofst:39304 sect:4912 next:44216 write time:8743
+zone is 0 write table:18398 to level-1 zone:0 of size:4034657 bytes ofst:44216 sect:7888 next:52104 write time:13543
+zone is 0 write table:18399 to level-1 zone:0 of size:4034610 bytes ofst:52104 sect:7888 next:59992 write time:13274
+zone is 0 write table:18400 to level-1 zone:0 of size:321264 bytes ofst:59992 sect:632 next:60624 write time:1525
+zone is 0 write table:18401 to level-1 zone:0 of size:4034574 bytes ofst:60624 sect:7888 next:68512 write time:13459
+zone is 0 write table:18402 to level-1 zone:0 of size:4034615 bytes ofst:68512 sect:7888 next:76400 write time:12634
+zone is 0 write table:18403 to level-1 zone:0 of size:3154157 bytes ofst:76400 sect:6168 next:82568 write time:10916
+zone is 0 write table:18404 to level-1 zone:0 of size:4034606 bytes ofst:82568 sect:7888 next:90456 write time:13341
+zone is 0 write table:18405 to level-1 zone:0 of size:3008094 bytes ofst:90456 sect:5880 next:96336 write time:10229
+zone is 0 write table:18406 to level-1 zone:0 of size:4034559 bytes ofst:96336 sect:7880 next:104216 write time:13394
+zone is 0 write table:18407 to level-1 zone:0 of size:4022057 bytes ofst:104216 sect:7856 next:112072 write time:13662
+zone is 0 write table:18408 to level-1 zone:0 of size:2995572 bytes ofst:112072 sect:5856 next:117928 write time:10298
+reset zone 20
+reset zone 0
+zone is 0 write table:18664 to level-1 zone:0 of size:1143095 bytes ofst:0 sect:2240 next:2240 write time:4154
+zone is 0 write table:18671 to level-1 zone:0 of size:2978853 bytes ofst:2240 sect:5824 next:8064 write time:9922
+zone is 0 write table:18673 to level-1 zone:0 of size:1960741 bytes ofst:8064 sect:3832 next:11896 write time:6216
+zone is 0 write table:18674 to level-1 zone:0 of size:4034595 bytes ofst:11896 sect:7888 next:19784 write time:13635
+zone is 0 write table:18675 to level-1 zone:0 of size:1042985 bytes ofst:19784 sect:2040 next:21824 write time:3522
+zone is 0 write table:18676 to level-1 zone:0 of size:4034586 bytes ofst:21824 sect:7888 next:29712 write time:12944
+zone is 0 write table:18677 to level-1 zone:0 of size:2403044 bytes ofst:29712 sect:4696 next:34408 write time:8202
+zone is 0 write table:18678 to level-1 zone:0 of size:2344604 bytes ofst:34408 sect:4584 next:38992 write time:8166
+zone is 0 write table:18679 to level-1 zone:0 of size:162742 bytes ofst:38992 sect:320 next:39312 write time:882
+zone is 0 write table:18683 to level-1 zone:0 of size:2444788 bytes ofst:39312 sect:4776 next:44088 write time:8627
+zone is 0 write table:18691 to level-1 zone:0 of size:4034581 bytes ofst:44088 sect:7888 next:51976 write time:13603
+zone is 0 write table:18692 to level-1 zone:0 of size:1839769 bytes ofst:51976 sect:3600 next:55576 write time:6291
+zone is 0 write table:18693 to level-1 zone:0 of size:3888511 bytes ofst:55576 sect:7600 next:63176 write time:13267
+zone is 0 write table:18694 to level-1 zone:0 of size:4034581 bytes ofst:63176 sect:7888 next:71064 write time:13755
+zone is 0 write table:18695 to level-1 zone:0 of size:4034657 bytes ofst:71064 sect:7888 next:78952 write time:13511
+zone is 0 write table:18696 to level-1 zone:0 of size:2044176 bytes ofst:78952 sect:4000 next:82952 write time:7083
+zone is 0 write table:18697 to level-1 zone:0 of size:4034613 bytes ofst:82952 sect:7888 next:90840 write time:13292
+zone is 0 write table:18698 to level-1 zone:0 of size:4034635 bytes ofst:90840 sect:7888 next:98728 write time:13734
+zone is 0 write table:18699 to level-1 zone:0 of size:4034585 bytes ofst:98728 sect:7888 next:106616 write time:13506
+zone is 0 write table:18700 to level-1 zone:0 of size:471445 bytes ofst:106616 sect:928 next:107544 write time:1878
+zone is 0 write table:18701 to level-1 zone:0 of size:4034575 bytes ofst:107544 sect:7888 next:115432 write time:13685
+zone is 0 write table:18702 to level-1 zone:0 of size:801062 bytes ofst:115432 sect:1568 next:117000 write time:3152
+zone is 0 write table:18703 to level-1 zone:0 of size:467257 bytes ofst:117000 sect:920 next:117920 write time:1915
+zone is 0 write table:18725 to level-1 zone:0 of size:4226 bytes ofst:117920 sect:16 next:117936 write time:100
+reset zone 50
+reset zone 10
+zone is 0 write table:18952 to level-1 zone:0 of size:1138938 bytes ofst:117936 sect:2232 next:120168 write time:4243
+zone is 0 write table:18960 to level-1 zone:0 of size:4034556 bytes ofst:120168 sect:7880 next:128048 write time:13740
+zone is 0 write table:18962 to level-1 zone:0 of size:475629 bytes ofst:128048 sect:936 next:128984 write time:1875
+finish zone 0
+reset zone 20
+zone is 0 error:-1 hm_write falid! table:19295

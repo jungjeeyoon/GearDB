@@ -89,8 +89,8 @@ case "$TARGET_OS" in
         ;;
     Linux)
         PLATFORM=OS_LINUX
-        COMMON_FLAGS="$MEMCMP_FLAG -pthread -DOS_LINUX"
-        PLATFORM_LDFLAGS="-pthread -lzbc"
+        COMMON_FLAGS="$MEMCMP_FLAG -pthread -DOS_LINUX -lzbd"
+        PLATFORM_LDFLAGS="-lzbd -pthread "
         PORT_FILE=port/port_posix.cc
         ;;
     SunOS)

@@ -60,8 +60,8 @@ BENCHMARKS = \
 	doc/bench/db_bench_sqlite3 \
 	doc/bench/db_bench_tree_db
 
-CFLAGS += -I. -I./include $(PLATFORM_CCFLAGS) $(OPT)
-CXXFLAGS += -I. -I./include $(PLATFORM_CXXFLAGS) $(OPT)
+CFLAGS += -I. -I./include $(PLATFORM_CCFLAGS) $(OPT) 
+CXXFLAGS += -I. -I./include $(PLATFORM_CXXFLAGS) $(OPT) 
 
 LDFLAGS += $(PLATFORM_LDFLAGS)
 LIBS += $(PLATFORM_LIBS)
@@ -304,100 +304,100 @@ $(SHARED_MEMENVLIB):$(SHARED_MEMENVOBJECTS)
 	$(AR) -rs $@ $(SHARED_MEMENVOBJECTS)
 
 $(STATIC_OUTDIR)/db_bench:db/db_bench.cc $(STATIC_LIBOBJECTS) $(TESTUTIL)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/db_bench.cc $(STATIC_LIBOBJECTS) $(TESTUTIL) -o $@ $(LIBS)
+	$(CXX) db/db_bench.cc $(STATIC_LIBOBJECTS) $(TESTUTIL) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/db_bench_sqlite3:doc/bench/db_bench_sqlite3.cc $(STATIC_LIBOBJECTS) $(TESTUTIL)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) doc/bench/db_bench_sqlite3.cc $(STATIC_LIBOBJECTS) $(TESTUTIL) -o $@ -lsqlite3 $(LIBS)
+	$(CXX) doc/bench/db_bench_sqlite3.cc $(STATIC_LIBOBJECTS) $(TESTUTIL) -o $@ -lsqlite3 $(LIBS) $(LDFLAGS) $(CXXFLAGS) 
 
 $(STATIC_OUTDIR)/db_bench_tree_db:doc/bench/db_bench_tree_db.cc $(STATIC_LIBOBJECTS) $(TESTUTIL)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) doc/bench/db_bench_tree_db.cc $(STATIC_LIBOBJECTS) $(TESTUTIL) -o $@ -lkyotocabinet $(LIBS)
+	$(CXX) doc/bench/db_bench_tree_db.cc $(STATIC_LIBOBJECTS) $(TESTUTIL) -o $@ -lkyotocabinet $(LIBS) $(LDFLAGS) $(CXXFLAGS) 
 
 $(STATIC_OUTDIR)/leveldbutil:db/leveldbutil.cc $(STATIC_LIBOBJECTS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/leveldbutil.cc $(STATIC_LIBOBJECTS) -o $@ $(LIBS)
+	$(CXX) db/leveldbutil.cc $(STATIC_LIBOBJECTS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS) 
 
 $(STATIC_OUTDIR)/arena_test:util/arena_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) util/arena_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) util/arena_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS) 
 
 $(STATIC_OUTDIR)/autocompact_test:db/autocompact_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/autocompact_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/autocompact_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/bloom_test:util/bloom_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) util/bloom_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) util/bloom_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/c_test:$(STATIC_OUTDIR)/db/c_test.o $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(STATIC_OUTDIR)/db/c_test.o $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) $(STATIC_OUTDIR)/db/c_test.o $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS)
 
 $(STATIC_OUTDIR)/cache_test:util/cache_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) util/cache_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) $(CXXFLAGS) util/cache_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS)
 
 $(STATIC_OUTDIR)/coding_test:util/coding_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) util/coding_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) util/coding_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/corruption_test:db/corruption_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/corruption_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/corruption_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/crc32c_test:util/crc32c_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) util/crc32c_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) util/crc32c_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/db_test:db/db_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/db_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/db_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/dbformat_test:db/dbformat_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/dbformat_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/dbformat_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/env_posix_test:util/env_posix_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) util/env_posix_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) util/env_posix_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/env_test:util/env_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) util/env_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) util/env_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/fault_injection_test:db/fault_injection_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/fault_injection_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/fault_injection_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/filename_test:db/filename_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/filename_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/filename_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/filter_block_test:table/filter_block_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) table/filter_block_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) table/filter_block_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/hash_test:util/hash_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) util/hash_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) util/hash_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/issue178_test:issues/issue178_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) issues/issue178_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) issues/issue178_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/issue200_test:issues/issue200_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) issues/issue200_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) issues/issue200_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/log_test:db/log_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/log_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/log_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/recovery_test:db/recovery_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/recovery_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/recovery_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/table_test:table/table_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) table/table_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) table/table_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/skiplist_test:db/skiplist_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/skiplist_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX)  db/skiplist_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/version_edit_test:db/version_edit_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/version_edit_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/version_edit_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/version_set_test:db/version_set_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/version_set_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/version_set_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/write_batch_test:db/write_batch_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS)
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) db/write_batch_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS)
+	$(CXX) db/write_batch_test.cc $(STATIC_LIBOBJECTS) $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(STATIC_OUTDIR)/memenv_test:$(STATIC_OUTDIR)/helpers/memenv/memenv_test.o $(STATIC_OUTDIR)/libmemenv.a $(STATIC_OUTDIR)/libleveldb.a $(TESTHARNESS)
-	$(XCRUN) $(CXX) $(LDFLAGS) $(STATIC_OUTDIR)/helpers/memenv/memenv_test.o $(STATIC_OUTDIR)/libmemenv.a $(STATIC_OUTDIR)/libleveldb.a $(TESTHARNESS) -o $@ $(LIBS)
+	$(XCRUN) $(CXX) $(STATIC_OUTDIR)/helpers/memenv/memenv_test.o $(STATIC_OUTDIR)/libmemenv.a $(STATIC_OUTDIR)/libleveldb.a $(TESTHARNESS) -o $@ $(LIBS) $(LDFLAGS)
 
 $(SHARED_OUTDIR)/db_bench:$(SHARED_OUTDIR)/db/db_bench.o $(SHARED_LIBS) $(TESTUTIL) $(TEST_STATIC_OBJS)
-	$(XCRUN) $(CXX) $(LDFLAGS) $(CXXFLAGS) $(PLATFORM_SHARED_CFLAGS) $(SHARED_CXXFLAGS) $(SHARED_OUTDIR)/db/db_bench.o $(TESTUTIL) $(TEST_STATIC_OBJS) $(SHARED_OUTDIR)/$(SHARED_LIB3) -o $@ $(LIBS)
+	$(XCRUN) $(CXX) $(PLATFORM_SHARED_CFLAGS) $(SHARED_CXXFLAGS) $(SHARED_OUTDIR)/db/db_bench.o $(TESTUTIL) $(TEST_STATIC_OBJS) $(SHARED_OUTDIR)/$(SHARED_LIB3) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 $(SHARED_OUTDIR)/c_test:$(SHARED_OUTDIR)/db/c_test.o $(SHARED_LIBS) $(TESTUTIL) $(TEST_STATIC_OBJS)
-	$(XCRUN) $(CXX) $(LDFLAGS) $(CXXFLAGS) $(PLATFORM_SHARED_CFLAGS) $(SHARED_CXXFLAGS) $(SHARED_OUTDIR)/db/c_test.o $(TESTUTIL) $(TEST_STATIC_OBJS) $(SHARED_OUTDIR)/$(SHARED_LIB3) -o $@ $(LIBS)
+	$(XCRUN) $(CXX) $(PLATFORM_SHARED_CFLAGS) $(SHARED_CXXFLAGS) $(SHARED_OUTDIR)/db/c_test.o $(TESTUTIL) $(TEST_STATIC_OBJS) $(SHARED_OUTDIR)/$(SHARED_LIB3) -o $@ $(LIBS) $(LDFLAGS) $(CXXFLAGS)
 
 .PHONY: run-shared-db_bench
 run-shared-db_bench: $(SHARED_OUTDIR)/db_bench

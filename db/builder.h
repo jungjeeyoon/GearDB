@@ -20,7 +20,7 @@ class WritableFile;
 
 // Build a Table file from the contents of *iter.  The generated file
 // will be named according to meta->number.  On success, the rest of
-// *meta will be filled with metadata about the generated table.
+// *meta will be filled with metadata about the .
 // If no data is present in *iter, meta->file_size will be set to
 // zero, and no Table file will be produced.
 extern Status BuildTable(const std::string& dbname,

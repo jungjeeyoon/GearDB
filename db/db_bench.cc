@@ -201,6 +201,8 @@ class Stats {
   double finish_;
   double seconds_;
   int done_;
+  double last_mid_ =0.;
+  int done_mid_ =0;
   int next_report_;
   int64_t bytes_;
   double last_op_finish_;
@@ -245,18 +247,25 @@ class Stats {
   }
 
   void FinishedSingleOp() {
+    double now = g_env->NowMicros();
+    double micros = now - last_op_finish_;
     if (FLAGS_histogram) {
-      double now = g_env->NowMicros();
-      double micros = now - last_op_finish_;
       hist_.Add(micros);
       if (micros > 20000) {
-        fprintf(stderr, "long op: %.1f micros%30s\r", micros, "");
+        //fprintf(stderr, "long op: %.1f micros%30s\r", micros, "");
         fflush(stderr);
       }
       last_op_finish_ = now;
     }
-
+    
+    micros = now - last_mid_;
     done_++;
+    if(micros > 10000000){
+      printf("ops is %f\n", (float)(done_-done_mid_)/(float)(micros)*10000000.f);
+      done_mid_ = done_;
+      last_mid_ = now;
+    }
+
     if (done_ >= next_report_) {
       if      (next_report_ < 1000)   next_report_ += 100;
       else if (next_report_ < 5000)   next_report_ += 500;
@@ -819,6 +828,7 @@ class Benchmark {
       }
     }
     hm_manager_->get_all_info();
+    
 
     thread->stats.AddBytes(bytes);
   }
