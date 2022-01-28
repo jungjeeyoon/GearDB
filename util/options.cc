@@ -16,7 +16,7 @@ Options::Options()
       paranoid_checks(false),
       env(Env::Default()),
       info_log(NULL),
-      write_buffer_size(8<<20),
+      write_buffer_size(12<<20),
       max_open_files(1000),
       block_cache(NULL),
       block_size(4096),
